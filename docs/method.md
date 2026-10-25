@@ -40,4 +40,3 @@ Random repair calls no model for the replacement. A seeded pseudorandom generato
 Every condition uses the same guard. It rejects invalid and unchanged proposals, loss of confirmed checks, earlier failure when both paths fail, and a larger numeric deficit when reachability is unchanged. Neutral preparations may be accepted. Rejection preserves the previous plan; complete success stops inference.
 
 The guard blocked 182 regressive proposals in the study. This makes zero lost checks in retained states a controller property, not evidence that the model never made harmful proposals. The guard can also block a temporary sacrifice that might have enabled a later repair.
-

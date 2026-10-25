@@ -31,4 +31,3 @@ const child = spawn(process.execPath, [join(STUDY, 'sources/scripts/retained-pla
 });
 child.on('error', error => {console.error(error.message); process.exitCode = 1;});
 child.on('exit', code => {process.exitCode = code ?? 1;});
-

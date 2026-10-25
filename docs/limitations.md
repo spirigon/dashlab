@@ -20,4 +20,3 @@ This is useful informal demonstration evidence but does not alter the frozen 288
 ## Next meaningful evaluation
 
 Predeclare a new experiment on held-out families, retain the same fair random and no-text controls, compare costs explicitly, and systematically playtest exports in the actual game with several participants. Measure mode, attempts, progress, and enjoyment separately from simulator success. A positive result is not assumed in advance.
-

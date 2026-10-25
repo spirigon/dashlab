@@ -26,4 +26,3 @@ Use `--format gmd` for the fallback. The command inspects the serialized structu
 ## Record game evidence
 
 Normal mode completion means finishing from the beginning in one run. Practice mode allows checkpoints. Record which one was used, approximate attempts, maximum progress, game build, and whether all intended routes/coins were tested. A simulator path is not a native-game completion record. See [the evidence limits](limitations.md).
-

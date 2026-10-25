@@ -99,4 +99,3 @@ All maintained documentation is English. Captured requests, original validator m
 - [Contributing](CONTRIBUTING.md)
 
 Independent course research prototype; not affiliated with Geometry Dash or its developer. The final study uses ready-made model weights, without fine-tuning or reinforcement learning.
-

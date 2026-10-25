@@ -4,9 +4,8 @@
 *.gdlvl binary
 *.gmd binary
 # Preserve the exact bytes used by the recorded experiment, including line endings.
-results/retained-plans-2026-10-24/** -text
-results/native-playtest.json -text
-public/repair-demo-data.json -text
-examples/recorded-repairs/** -text
-test/fixtures/** -text
-
+results/retained-plans-2026-10-24/** -text whitespace=cr-at-eol,-blank-at-eof
+results/native-playtest.json -text whitespace=cr-at-eol,-blank-at-eof
+public/repair-demo-data.json -text whitespace=cr-at-eol,-blank-at-eof
+examples/recorded-repairs/** -text whitespace=cr-at-eol,-blank-at-eof
+test/fixtures/** -text whitespace=cr-at-eol,-blank-at-eof

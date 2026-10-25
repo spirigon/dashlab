@@ -13,4 +13,3 @@ The maintained application modules may evolve. Historical replay deliberately im
 ## Scope of this repository
 
 This is a curated research release of the final study and working application. Earlier result batches, packaging experiments, slide-generation sources, and obsolete runners remain in the original development workspace and are intentionally excluded. The original full development suite had broader historical-runner coverage; this repository maintains the applicable core/application tests and adds repository reproducibility checks.
-

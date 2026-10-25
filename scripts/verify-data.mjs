@@ -26,4 +26,3 @@ export async function verifyData() {
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   console.log(JSON.stringify(await verifyData(), null, 2));
 }
-

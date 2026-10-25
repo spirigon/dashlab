@@ -68,4 +68,3 @@ npm run study -- --resume artifacts/new-study
 ```
 
 This uses the frozen runner, prepares the fixed bank, binds installed model digests, and performs new inference. It is a separate run and may take substantial time. Preparation checks feasibility and requires the 4B model to be installed; a missing 9B profile remains pending. Resume checks source hashes, bank hashes, model bindings, and settings. Review current tag digests against the recorded bindings before claiming an exact model match. See [reproducibility](reproducibility.md).
-

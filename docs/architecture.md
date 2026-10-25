@@ -47,4 +47,3 @@ Codex assisted implementation, testing, and preparation of presentation material
 ## Optional application features
 
 Elevated blocks, ceiling spikes, coins, route separation, and timing windows are available as application prototypes. Their engines and regression fixtures remain in the repository. They are **not additional mechanics or endpoints in the final 288-chain study**. Earlier study runners and result batches are omitted from this curated repository.
-

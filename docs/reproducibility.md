@@ -77,4 +77,3 @@ For a deliberately incomplete run, append `--partial`; the result is explicitly 
 ## Continuous integration
 
 GitHub Actions runs source/data checks and tests on Windows and Linux, plus an independent full replay and English figure build on Linux. No model API calls or GPU jobs run in CI. The workflow pins action commits and the plotting dependencies. Raw data hashes are checked before and after replay.
-

@@ -47,4 +47,3 @@ const report = {
 await writeFile(join(out, 'reproduction.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));
 console.log('Reproduction report: ' + join(out, 'reproduction.json'));
-
