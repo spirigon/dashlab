@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "Qwen Repair M02",
+  "length": 96,
+  "objects": [
+    {
+      "type": "block",
+      "x": 10,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "type": "spike",
+      "x": 13,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 29,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "type": "spike",
+      "x": 32,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 48,
+      "w": 2,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 52,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "type": "spike",
+      "x": 67,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 72,
+      "w": 3,
+      "h": 1
+    }
+  ]
+}

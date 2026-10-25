@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10151d"><title>DashLab · From failure to a complete path</title><link rel="stylesheet" href="/repair-demo.css"></head>
+<body>
+  <header class="top"><a class="brand" href="/">◈ DASH<span>LAB</span></a><span class="course">MODERN METHODS OF GENAI</span><a href="/">Back to the generator ↗</a></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">GENERATION WITH VERIFIER FEEDBACK</p><h1>From failure<br><span>to a complete path.</span></h1><p class="lede">The initial plan, measured errors and actual repairs from local Qwen.</p></div><div class="recorded"><i></i><div><strong>Recorded model responses</strong><span>Replay without new LLM calls</span></div></div></div>
+    <div id="notice" class="notice" role="status">Loading recorded repair chains…</div>
+    <div id="content" hidden>
+      <div class="examples" id="examples" aria-label="Recorded examples"></div>
+      <div class="context"><div><h2 id="example-title"></h2><p id="source"></p></div><span class="tag" id="model"></span></div>
+      <div class="experiment-grid">
+        <section class="stage">
+          <div class="compare">
+            <article class="preview"><div class="preview-head"><div><span class="label">01 / BEFORE</span><h3>Initial plan</h3></div><span id="before-status" class="badge"></span></div><canvas id="before" aria-label="Initial level and solver trajectory"></canvas><canvas id="before-overview" class="overview" aria-label="Initial level overview"></canvas><p id="before-caption" class="caption"></p></article>
+            <article class="preview"><div class="preview-head"><div><span class="label">02 / AFTER VALIDATION</span><h3 id="after-title">Model proposal</h3></div><span id="after-status" class="badge"></span></div><canvas id="after" aria-label="Selected proposal and solver trajectory"></canvas><canvas id="after-overview" class="overview" aria-label="Selected proposal overview"></canvas><p id="after-caption" class="caption"></p></article>
+          </div>
+          <div class="toolbar"><div><button id="play" class="primary" type="button">▶ Replay both</button><button id="reset" type="button">↺ Reset</button></div><span id="play-status" aria-live="polite">Fixed approximate physics</span></div>
+          <section class="requirements"><div class="section-head"><h3>The original requirements stay fixed</h3><span>Initial → selected</span></div><table><thead><tr><th>Check</th><th>Required</th><th>Before</th><th>After</th></tr></thead><tbody id="requirements"></tbody></table></section>
+        </section>
+        <aside class="history"><div class="section-head"><h3>Repair history</h3><span id="call-count"></span></div><div id="steps" class="steps" aria-label="Recorded chain steps"></div><div id="decision" class="decision"></div><div class="feedback"><span class="label">FEEDBACK BEFORE THIS PROPOSAL</span><p id="feedback"></p><details><summary>Original recorded diagnostic</summary><pre id="diagnostic"></pre></details></div><details class="raw"><summary>Original model response JSON</summary><pre id="raw"></pre></details><a id="download" class="download" download>Download final .gdlvl ↓</a><p class="small">A user reported completion after receiving M01 and M03; IDs are inferred from context, mode and attempts are unknown. Other examples have no recorded completion.</p></aside>
+      </div>
+      <section class="results"><div class="section-head"><div><span class="label">ALL OUTCOMES, INCLUDING FAILURES</span><h2>An example is part of the experiment</h2></div><span class="tag" id="study-count"></span></div><p>These examples were selected after the results to explain the mechanism. The table below includes every assigned case.</p><div class="table-scroll"><table><thead><tr><th>Repair condition</th><th>Qwen 4B</th><th>Qwen 9B</th></tr></thead><tbody id="study-results"></tbody></table></div><p id="study-note" class="small"></p></section>
+      <footer>Qwen selects pattern types and order. A fixed library supplies geometry; search and independent rules check the result. Requirements are never weakened to obtain success.</footer>
+    </div>
+  </main>
+  <script type="module" src="/repair-demo.js"></script>
+</body></html>

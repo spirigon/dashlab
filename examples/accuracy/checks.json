@@ -1,0 +1,995 @@
+{
+  "source": "procedural timing examples, NOT LLM results or game difficulty ratings",
+  "checks": [
+    {
+      "id": "T01",
+      "source": "procedural-example",
+      "levelHash": "8ed15a97425f1293de57617bf1a9162f8cecc867a0b3de85e672a4276b59a201",
+      "requirements": {
+        "length": 52,
+        "minSpikes": 2,
+        "minBlocks": 3,
+        "minDoubleSpikes": 1,
+        "minJumps": 2,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minCoins": 1,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v3-coins",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 52 / 52"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 2 / ≥2"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 3 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 1 / ≥1"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 11 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 4 / ≥2"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 1 / ≥1"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 2 / ≤2"
+          },
+          {
+            "code": "COINS",
+            "passed": true,
+            "message": "Монеты: 1 / ≥1"
+          },
+          {
+            "code": "ALL_COINS",
+            "passed": true,
+            "message": "Все монеты за один проход: 1 / 1"
+          }
+        ],
+        "stats": {
+          "spikes": 2,
+          "blocks": 3,
+          "doubleSpikes": 1,
+          "tripleSpikes": 0,
+          "tallBlocks": 0,
+          "tightGaps": 0,
+          "raisedBlocks": 1,
+          "raisedSpikes": 0,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 2,
+          "coins": 1
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 23842,
+          "maxX": 52.01655,
+          "jumpTicks": [
+            77,
+            123,
+            313,
+            423
+          ],
+          "objective": "jumps",
+          "pathJumps": 4,
+          "pathElevatedLandings": 1,
+          "minJumps": 4,
+          "errors": [],
+          "goal": "finish",
+          "collectedCoins": 1,
+          "coinMask": 1
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": [],
+        "coinSolver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 23087,
+          "maxX": 52.01655,
+          "jumpTicks": [
+            77,
+            123,
+            313,
+            423
+          ],
+          "objective": "jumps",
+          "pathJumps": 4,
+          "pathElevatedLandings": 1,
+          "minJumps": 4,
+          "errors": [],
+          "goal": "all-coins",
+          "collectedCoins": 1,
+          "coinMask": 1
+        },
+        "coinsPlayable": true
+      },
+      "timings": {
+        "finish": {
+          "version": "local-input-windows-v1",
+          "physicsHz": 120,
+          "goal": "finish",
+          "horizonTicks": 24,
+          "tickMs": 8.333333333333334,
+          "status": "measured",
+          "profileObserved": "wide",
+          "minimumWindowMs": 91.66666666666667,
+          "minimumWindowUpperMs": 91.66666666666667,
+          "minimumWindowExact": true,
+          "worstSymmetricMarginMs": 41.666666666666664,
+          "windows": [
+            {
+              "jump": 1,
+              "tick": 57,
+              "x": 4.93335,
+              "earliestTick": 44,
+              "latestTick": 70,
+              "earlyTicks": 13,
+              "lateTicks": 13,
+              "widthTicks": 26,
+              "feasibleTicks": 27,
+              "earlyMs": 108.33333333333333,
+              "lateMs": 108.33333333333333,
+              "widthMs": 216.66666666666666,
+              "censored": false
+            },
+            {
+              "jump": 2,
+              "tick": 110,
+              "x": 9.5205,
+              "earliestTick": 97,
+              "latestTick": 123,
+              "earlyTicks": 13,
+              "lateTicks": 13,
+              "widthTicks": 26,
+              "feasibleTicks": 27,
+              "earlyMs": 108.33333333333333,
+              "lateMs": 108.33333333333333,
+              "widthMs": 216.66666666666666,
+              "censored": false
+            },
+            {
+              "jump": 3,
+              "tick": 307,
+              "x": 26.57085,
+              "earliestTick": 302,
+              "latestTick": 313,
+              "earlyTicks": 5,
+              "lateTicks": 6,
+              "widthTicks": 11,
+              "feasibleTicks": 12,
+              "earlyMs": 41.666666666666664,
+              "lateMs": 50,
+              "widthMs": 91.66666666666667,
+              "censored": false
+            },
+            {
+              "jump": 4,
+              "tick": 406,
+              "x": 35.1393,
+              "earliestTick": 390,
+              "latestTick": 423,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            }
+          ],
+          "originalJumpTicks": [
+            77,
+            123,
+            313,
+            423
+          ],
+          "recommendedJumpTicks": [
+            57,
+            110,
+            307,
+            406
+          ],
+          "optimizationPasses": 4,
+          "replays": 1110,
+          "jointJitter": {
+            "ticks": 3,
+            "ms": 25,
+            "survived": 128,
+            "total": 128,
+            "seed": 20261023
+          },
+          "scope": "One jump shifted at a time with all other recommended inputs fixed; finite scan horizon. Joint jitter is a separate deterministic sample, not a guarantee or human difficulty rating."
+        },
+        "all-coins": {
+          "version": "local-input-windows-v1",
+          "physicsHz": 120,
+          "goal": "all-coins",
+          "horizonTicks": 24,
+          "tickMs": 8.333333333333334,
+          "status": "measured",
+          "profileObserved": "wide",
+          "minimumWindowMs": 91.66666666666667,
+          "minimumWindowUpperMs": 91.66666666666667,
+          "minimumWindowExact": true,
+          "worstSymmetricMarginMs": 41.666666666666664,
+          "windows": [
+            {
+              "jump": 1,
+              "tick": 57,
+              "x": 4.93335,
+              "earliestTick": 44,
+              "latestTick": 70,
+              "earlyTicks": 13,
+              "lateTicks": 13,
+              "widthTicks": 26,
+              "feasibleTicks": 27,
+              "earlyMs": 108.33333333333333,
+              "lateMs": 108.33333333333333,
+              "widthMs": 216.66666666666666,
+              "censored": false
+            },
+            {
+              "jump": 2,
+              "tick": 110,
+              "x": 9.5205,
+              "earliestTick": 97,
+              "latestTick": 123,
+              "earlyTicks": 13,
+              "lateTicks": 13,
+              "widthTicks": 26,
+              "feasibleTicks": 27,
+              "earlyMs": 108.33333333333333,
+              "lateMs": 108.33333333333333,
+              "widthMs": 216.66666666666666,
+              "censored": false
+            },
+            {
+              "jump": 3,
+              "tick": 307,
+              "x": 26.57085,
+              "earliestTick": 302,
+              "latestTick": 313,
+              "earlyTicks": 5,
+              "lateTicks": 6,
+              "widthTicks": 11,
+              "feasibleTicks": 12,
+              "earlyMs": 41.666666666666664,
+              "lateMs": 50,
+              "widthMs": 91.66666666666667,
+              "censored": false
+            },
+            {
+              "jump": 4,
+              "tick": 406,
+              "x": 35.1393,
+              "earliestTick": 390,
+              "latestTick": 423,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            }
+          ],
+          "originalJumpTicks": [
+            77,
+            123,
+            313,
+            423
+          ],
+          "recommendedJumpTicks": [
+            57,
+            110,
+            307,
+            406
+          ],
+          "optimizationPasses": 4,
+          "replays": 1110,
+          "jointJitter": {
+            "ticks": 3,
+            "ms": 25,
+            "survived": 128,
+            "total": 128,
+            "seed": 20261023
+          },
+          "scope": "One jump shifted at a time with all other recommended inputs fixed; finite scan horizon. Joint jitter is a separate deterministic sample, not a guarantee or human difficulty rating."
+        }
+      },
+      "targetProfile": "wide",
+      "gameVerified": false
+    },
+    {
+      "id": "T02",
+      "source": "procedural-example",
+      "levelHash": "7362b9d318803655b969d42d287bbf6a335800739e110f1213517db3a1ae5023",
+      "requirements": {
+        "length": 52,
+        "minSpikes": 2,
+        "minBlocks": 3,
+        "minDoubleSpikes": 1,
+        "minJumps": 2,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minCoins": 1,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v3-coins",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 52 / 52"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 2 / ≥2"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 3 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 1 / ≥1"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 11 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 3 / ≥2"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 1 / ≥1"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 2 / ≤2"
+          },
+          {
+            "code": "COINS",
+            "passed": true,
+            "message": "Монеты: 1 / ≥1"
+          },
+          {
+            "code": "ALL_COINS",
+            "passed": true,
+            "message": "Все монеты за один проход: 1 / 1"
+          }
+        ],
+        "stats": {
+          "spikes": 2,
+          "blocks": 3,
+          "doubleSpikes": 1,
+          "tripleSpikes": 0,
+          "tallBlocks": 0,
+          "tightGaps": 0,
+          "raisedBlocks": 1,
+          "raisedSpikes": 0,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 2,
+          "coins": 1
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 24697,
+          "maxX": 52.01655,
+          "jumpTicks": [
+            77,
+            313,
+            423
+          ],
+          "objective": "jumps",
+          "pathJumps": 3,
+          "pathElevatedLandings": 0,
+          "minJumps": 3,
+          "errors": [],
+          "goal": "finish",
+          "collectedCoins": 0,
+          "coinMask": 0
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": [],
+        "coinSolver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 22748,
+          "maxX": 52.01655,
+          "jumpTicks": [
+            71,
+            111,
+            313,
+            423
+          ],
+          "objective": "jumps",
+          "pathJumps": 4,
+          "pathElevatedLandings": 1,
+          "minJumps": 4,
+          "errors": [],
+          "goal": "all-coins",
+          "collectedCoins": 1,
+          "coinMask": 1
+        },
+        "coinsPlayable": true
+      },
+      "timings": {
+        "finish": {
+          "version": "local-input-windows-v1",
+          "physicsHz": 120,
+          "goal": "finish",
+          "horizonTicks": 24,
+          "tickMs": 8.333333333333334,
+          "status": "measured",
+          "profileObserved": "wide",
+          "minimumWindowMs": 91.66666666666667,
+          "minimumWindowUpperMs": 91.66666666666667,
+          "minimumWindowExact": true,
+          "worstSymmetricMarginMs": 41.666666666666664,
+          "windows": [
+            {
+              "jump": 1,
+              "tick": 60,
+              "x": 5.193,
+              "earliestTick": 44,
+              "latestTick": 77,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            },
+            {
+              "jump": 2,
+              "tick": 307,
+              "x": 26.57085,
+              "earliestTick": 302,
+              "latestTick": 313,
+              "earlyTicks": 5,
+              "lateTicks": 6,
+              "widthTicks": 11,
+              "feasibleTicks": 12,
+              "earlyMs": 41.666666666666664,
+              "lateMs": 50,
+              "widthMs": 91.66666666666667,
+              "censored": false
+            },
+            {
+              "jump": 3,
+              "tick": 406,
+              "x": 35.1393,
+              "earliestTick": 390,
+              "latestTick": 423,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            }
+          ],
+          "originalJumpTicks": [
+            77,
+            313,
+            423
+          ],
+          "recommendedJumpTicks": [
+            60,
+            307,
+            406
+          ],
+          "optimizationPasses": 3,
+          "replays": 718,
+          "jointJitter": {
+            "ticks": 3,
+            "ms": 25,
+            "survived": 128,
+            "total": 128,
+            "seed": 20261023
+          },
+          "scope": "One jump shifted at a time with all other recommended inputs fixed; finite scan horizon. Joint jitter is a separate deterministic sample, not a guarantee or human difficulty rating."
+        },
+        "all-coins": {
+          "version": "local-input-windows-v1",
+          "physicsHz": 120,
+          "goal": "all-coins",
+          "horizonTicks": 24,
+          "tickMs": 8.333333333333334,
+          "status": "measured",
+          "profileObserved": "balanced",
+          "minimumWindowMs": 75,
+          "minimumWindowUpperMs": 75,
+          "minimumWindowExact": true,
+          "worstSymmetricMarginMs": 33.333333333333336,
+          "windows": [
+            {
+              "jump": 1,
+              "tick": 55,
+              "x": 4.76025,
+              "earliestTick": 44,
+              "latestTick": 66,
+              "earlyTicks": 11,
+              "lateTicks": 11,
+              "widthTicks": 22,
+              "feasibleTicks": 23,
+              "earlyMs": 91.66666666666667,
+              "lateMs": 91.66666666666667,
+              "widthMs": 183.33333333333334,
+              "censored": false
+            },
+            {
+              "jump": 2,
+              "tick": 106,
+              "x": 9.1743,
+              "earliestTick": 102,
+              "latestTick": 111,
+              "earlyTicks": 4,
+              "lateTicks": 5,
+              "widthTicks": 9,
+              "feasibleTicks": 10,
+              "earlyMs": 33.333333333333336,
+              "lateMs": 41.666666666666664,
+              "widthMs": 75,
+              "censored": false
+            },
+            {
+              "jump": 3,
+              "tick": 307,
+              "x": 26.57085,
+              "earliestTick": 302,
+              "latestTick": 313,
+              "earlyTicks": 5,
+              "lateTicks": 6,
+              "widthTicks": 11,
+              "feasibleTicks": 12,
+              "earlyMs": 41.666666666666664,
+              "lateMs": 50,
+              "widthMs": 91.66666666666667,
+              "censored": false
+            },
+            {
+              "jump": 4,
+              "tick": 406,
+              "x": 35.1393,
+              "earliestTick": 390,
+              "latestTick": 423,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            }
+          ],
+          "originalJumpTicks": [
+            71,
+            111,
+            313,
+            423
+          ],
+          "recommendedJumpTicks": [
+            55,
+            106,
+            307,
+            406
+          ],
+          "optimizationPasses": 3,
+          "replays": 914,
+          "jointJitter": {
+            "ticks": 3,
+            "ms": 25,
+            "survived": 128,
+            "total": 128,
+            "seed": 20261023
+          },
+          "scope": "One jump shifted at a time with all other recommended inputs fixed; finite scan horizon. Joint jitter is a separate deterministic sample, not a guarantee or human difficulty rating."
+        }
+      },
+      "targetProfile": "balanced",
+      "gameVerified": false
+    },
+    {
+      "id": "T03",
+      "source": "procedural-example",
+      "levelHash": "dbad9a017c0c3ab86ccd6eec01234bbc8456a52c8100190cef9070e0f17376a5",
+      "requirements": {
+        "length": 52,
+        "minSpikes": 2,
+        "minBlocks": 3,
+        "minDoubleSpikes": 1,
+        "minJumps": 2,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minCoins": 1,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v3-coins",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 52 / 52"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 2 / ≥2"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 4 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 1 / ≥1"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 11 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 3 / ≥2"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 2 / ≥1"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 2 / ≤2"
+          },
+          {
+            "code": "COINS",
+            "passed": true,
+            "message": "Монеты: 1 / ≥1"
+          },
+          {
+            "code": "ALL_COINS",
+            "passed": true,
+            "message": "Все монеты за один проход: 1 / 1"
+          }
+        ],
+        "stats": {
+          "spikes": 2,
+          "blocks": 4,
+          "doubleSpikes": 1,
+          "tripleSpikes": 0,
+          "tallBlocks": 0,
+          "tightGaps": 0,
+          "raisedBlocks": 2,
+          "raisedSpikes": 0,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 2,
+          "coins": 1
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 23609,
+          "maxX": 52.01655,
+          "jumpTicks": [
+            77,
+            313,
+            423
+          ],
+          "objective": "jumps",
+          "pathJumps": 3,
+          "pathElevatedLandings": 0,
+          "minJumps": 3,
+          "errors": [],
+          "goal": "finish",
+          "collectedCoins": 0,
+          "coinMask": 0
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": [],
+        "coinSolver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 21843,
+          "maxX": 52.01655,
+          "jumpTicks": [
+            71,
+            111,
+            313,
+            423
+          ],
+          "objective": "jumps",
+          "pathJumps": 4,
+          "pathElevatedLandings": 1,
+          "minJumps": 4,
+          "errors": [],
+          "goal": "all-coins",
+          "collectedCoins": 1,
+          "coinMask": 1
+        },
+        "coinsPlayable": true
+      },
+      "timings": {
+        "finish": {
+          "version": "local-input-windows-v1",
+          "physicsHz": 120,
+          "goal": "finish",
+          "horizonTicks": 24,
+          "tickMs": 8.333333333333334,
+          "status": "measured",
+          "profileObserved": "wide",
+          "minimumWindowMs": 91.66666666666667,
+          "minimumWindowUpperMs": 91.66666666666667,
+          "minimumWindowExact": true,
+          "worstSymmetricMarginMs": 41.666666666666664,
+          "windows": [
+            {
+              "jump": 1,
+              "tick": 60,
+              "x": 5.193,
+              "earliestTick": 44,
+              "latestTick": 77,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            },
+            {
+              "jump": 2,
+              "tick": 307,
+              "x": 26.57085,
+              "earliestTick": 302,
+              "latestTick": 313,
+              "earlyTicks": 5,
+              "lateTicks": 6,
+              "widthTicks": 11,
+              "feasibleTicks": 12,
+              "earlyMs": 41.666666666666664,
+              "lateMs": 50,
+              "widthMs": 91.66666666666667,
+              "censored": false
+            },
+            {
+              "jump": 3,
+              "tick": 406,
+              "x": 35.1393,
+              "earliestTick": 390,
+              "latestTick": 423,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            }
+          ],
+          "originalJumpTicks": [
+            77,
+            313,
+            423
+          ],
+          "recommendedJumpTicks": [
+            60,
+            307,
+            406
+          ],
+          "optimizationPasses": 3,
+          "replays": 718,
+          "jointJitter": {
+            "ticks": 3,
+            "ms": 25,
+            "survived": 128,
+            "total": 128,
+            "seed": 20261023
+          },
+          "scope": "One jump shifted at a time with all other recommended inputs fixed; finite scan horizon. Joint jitter is a separate deterministic sample, not a guarantee or human difficulty rating."
+        },
+        "all-coins": {
+          "version": "local-input-windows-v1",
+          "physicsHz": 120,
+          "goal": "all-coins",
+          "horizonTicks": 24,
+          "tickMs": 8.333333333333334,
+          "status": "measured",
+          "profileObserved": "tight",
+          "minimumWindowMs": 25,
+          "minimumWindowUpperMs": 25,
+          "minimumWindowExact": true,
+          "worstSymmetricMarginMs": 8.333333333333334,
+          "windows": [
+            {
+              "jump": 1,
+              "tick": 56,
+              "x": 4.8468,
+              "earliestTick": 44,
+              "latestTick": 69,
+              "earlyTicks": 12,
+              "lateTicks": 13,
+              "widthTicks": 25,
+              "feasibleTicks": 26,
+              "earlyMs": 100,
+              "lateMs": 108.33333333333333,
+              "widthMs": 208.33333333333334,
+              "censored": false
+            },
+            {
+              "jump": 2,
+              "tick": 109,
+              "x": 9.43395,
+              "earliestTick": 108,
+              "latestTick": 111,
+              "earlyTicks": 1,
+              "lateTicks": 2,
+              "widthTicks": 3,
+              "feasibleTicks": 4,
+              "earlyMs": 8.333333333333334,
+              "lateMs": 16.666666666666668,
+              "widthMs": 25,
+              "censored": false
+            },
+            {
+              "jump": 3,
+              "tick": 307,
+              "x": 26.57085,
+              "earliestTick": 302,
+              "latestTick": 313,
+              "earlyTicks": 5,
+              "lateTicks": 6,
+              "widthTicks": 11,
+              "feasibleTicks": 12,
+              "earlyMs": 41.666666666666664,
+              "lateMs": 50,
+              "widthMs": 91.66666666666667,
+              "censored": false
+            },
+            {
+              "jump": 4,
+              "tick": 406,
+              "x": 35.1393,
+              "earliestTick": 390,
+              "latestTick": 423,
+              "earlyTicks": 16,
+              "lateTicks": 17,
+              "widthTicks": 33,
+              "feasibleTicks": 34,
+              "earlyMs": 133.33333333333334,
+              "lateMs": 141.66666666666666,
+              "widthMs": 275,
+              "censored": false
+            }
+          ],
+          "originalJumpTicks": [
+            71,
+            111,
+            313,
+            423
+          ],
+          "recommendedJumpTicks": [
+            56,
+            109,
+            307,
+            406
+          ],
+          "optimizationPasses": 3,
+          "replays": 914,
+          "jointJitter": {
+            "ticks": 3,
+            "ms": 25,
+            "survived": 79,
+            "total": 128,
+            "seed": 20261023
+          },
+          "scope": "One jump shifted at a time with all other recommended inputs fixed; finite scan horizon. Joint jitter is a separate deterministic sample, not a guarantee or human difficulty rating."
+        }
+      },
+      "targetProfile": "tight",
+      "gameVerified": false
+    }
+  ]
+}

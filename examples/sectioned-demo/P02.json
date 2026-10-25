@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "Qwen Sections P02",
+  "length": 92,
+  "objects": [
+    {
+      "type": "block",
+      "x": 9,
+      "w": 2,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 13,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "type": "block",
+      "x": 27,
+      "w": 2,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 31,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "type": "spike",
+      "x": 46,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 51,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 64,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 69,
+      "w": 3,
+      "h": 1
+    }
+  ]
+}

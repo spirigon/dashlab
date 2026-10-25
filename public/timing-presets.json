@@ -1,0 +1,65 @@
+[
+  {
+    "id": "timing-wide",
+    "title": "Точность · широкие окна",
+    "geometry": "coins",
+    "prompt": "Короткий уровень с одной монетой на верхней площадке. Нужны широкие окна нажатия для пути со всеми монетами: невысокие подъёмы, широкие опоры, паузы. Никаких длинных рядов наземных шипов.",
+    "requirements": {
+      "length": 52,
+      "minSpikes": 2,
+      "minBlocks": 3,
+      "minDoubleSpikes": 1,
+      "minJumps": 2,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minCoins": 1,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2
+    },
+    "timingProfile": "wide",
+    "example": "/coin-examples/timing-wide.json"
+  },
+  {
+    "id": "timing-balanced",
+    "title": "Точность · средние окна",
+    "geometry": "coins",
+    "prompt": "Уровень с монетой на высокой площадке и отдельными простыми препятствиями после отдыха. Для сбора монеты нужен контролируемый высокий прыжок; целевой минимум локального окна — 4–9 тиков. Обычный финиш также должен быть возможен.",
+    "requirements": {
+      "length": 52,
+      "minSpikes": 2,
+      "minBlocks": 3,
+      "minDoubleSpikes": 1,
+      "minJumps": 2,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minCoins": 1,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2
+    },
+    "timingProfile": "balanced",
+    "example": "/coin-examples/timing-balanced.json"
+  },
+  {
+    "id": "timing-tight",
+    "title": "Точность · узкое окно",
+    "geometry": "coins",
+    "prompt": "Явно сложный необязательный подъём за монетой: ограничь ранний прыжок потолком над подходом, оставив достижимый поздний прыжок на высокую площадку. Целевое локальное окно не больше трёх тиков. Нижний путь к финишу сохраняется. После связки оставь длинную паузу; без длинных рядов шипов.",
+    "requirements": {
+      "length": 52,
+      "minSpikes": 2,
+      "minBlocks": 3,
+      "minDoubleSpikes": 1,
+      "minJumps": 2,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minCoins": 1,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2
+    },
+    "timingProfile": "tight",
+    "example": "/coin-examples/timing-tight.json"
+  }
+]

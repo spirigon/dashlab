@@ -1,0 +1,95 @@
+{
+  "recorded": true,
+  "gameVerified": false,
+  "selection": "Documented first-match post-outcome examples, not an added evaluation sample. Qwen selects plans, fixed compiler supplies geometry. No hidden feasibility map used.",
+  "levels": [
+    {
+      "id": "M01",
+      "model": "qwen3.5:4b",
+      "caseId": "new-intro-a-r0",
+      "arm": "local_feedback",
+      "initialPassed": false,
+      "minJumps": 8,
+      "repairs": 2,
+      "hash": "098eb4ba4dfc599efbdd51ec58e7ab6c45d98011165e329a805e7cdb7b2ff7dc",
+      "native": [
+        {
+          "format": "gdlvl",
+          "objects": 27
+        },
+        {
+          "format": "gmd",
+          "objects": 27
+        }
+      ],
+      "selection": "First qwen3.5:4b local-feedback repaired success, preferring matched local-none failure; post-outcome illustration",
+      "gameVerified": false
+    },
+    {
+      "id": "M02",
+      "model": "qwen3.5:9b-q4_K_M",
+      "caseId": "new-intro-a-r0",
+      "arm": "local_feedback",
+      "initialPassed": false,
+      "minJumps": 8,
+      "repairs": 1,
+      "hash": "e7af3b6e1478c1b6f4765f65e100ed00c9dd5151b83f73403f39a9abd79bd2a5",
+      "native": [
+        {
+          "format": "gdlvl",
+          "objects": 27
+        },
+        {
+          "format": "gmd",
+          "objects": 27
+        }
+      ],
+      "selection": "First qwen3.5:9b-q4_K_M local-feedback repaired success, preferring matched local-none failure; post-outcome illustration",
+      "gameVerified": false
+    },
+    {
+      "id": "M03",
+      "model": "qwen3.5:9b-q4_K_M",
+      "caseId": "new-gauntlet-b-r1",
+      "arm": "local_feedback",
+      "initialPassed": false,
+      "minJumps": 26,
+      "repairs": 1,
+      "hash": "a47c086d98c25585e20c6f29b5d11b1c58b74e151b0f0f143dedbbd84b3607ca",
+      "native": [
+        {
+          "format": "gdlvl",
+          "objects": 81
+        },
+        {
+          "format": "gmd",
+          "objects": 81
+        }
+      ],
+      "selection": "Highest-jump distinct repaired success; post-outcome illustration",
+      "gameVerified": false
+    },
+    {
+      "id": "M04",
+      "model": "qwen3.5:9b-q4_K_M",
+      "caseId": "new-dense-b-r0",
+      "arm": "local_feedback",
+      "initialPassed": false,
+      "minJumps": 22,
+      "repairs": 3,
+      "hash": "b43b3c906ec611992370636135744221fe00a98a4724b314a82b2faf0d576368",
+      "native": [
+        {
+          "format": "gdlvl",
+          "objects": 69
+        },
+        {
+          "format": "gmd",
+          "objects": 69
+        }
+      ],
+      "selection": "First distinct repaired success with a regressive rejected proposal, preferring local scope; fallback to a repeated rejected proposal. Controller illustration selected after results",
+      "gameVerified": false
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "selection": "Post-outcome illustrations: first validator-only full success, first successful <=10-jump map with a rejection, first 12-jump success; distinct geometry. Not an added evaluation sample.",
+  "method": "section-plans-final-requirements-v1",
+  "gameVerified": false,
+  "levels": [
+    {
+      "id": "P01",
+      "caseId": "fresh-dense-0",
+      "condition": "validator",
+      "minJumps": 18,
+      "proposals": 6,
+      "sections": 4,
+      "hash": "2853ba8b23698574f3bf79651464bacdcb406d8abf462e12ddcc12376e340f8e",
+      "native": [
+        {
+          "format": "gdlvl",
+          "nativeObjects": 54
+        },
+        {
+          "format": "gmd",
+          "nativeObjects": 54
+        }
+      ],
+      "gameVerified": false
+    },
+    {
+      "id": "P02",
+      "caseId": "fresh-intro-0",
+      "condition": "none",
+      "minJumps": 8,
+      "proposals": 5,
+      "sections": 4,
+      "hash": "fd34c5825e8b96a15cd179e7a6a3da94774a49bd2be3f6716e265e6499537113",
+      "native": [
+        {
+          "format": "gdlvl",
+          "nativeObjects": 25
+        },
+        {
+          "format": "gmd",
+          "nativeObjects": 25
+        }
+      ],
+      "gameVerified": false
+    },
+    {
+      "id": "P03",
+      "caseId": "fresh-spikes-1",
+      "condition": "none",
+      "minJumps": 12,
+      "proposals": 5,
+      "sections": 4,
+      "hash": "44e42c6ab9e8f533a6baf71b9284c93651379f286ded19bc88526885adf2e4d9",
+      "native": [
+        {
+          "format": "gdlvl",
+          "nativeObjects": 35
+        },
+        {
+          "format": "gmd",
+          "nativeObjects": 35
+        }
+      ],
+      "gameVerified": false
+    }
+  ]
+}

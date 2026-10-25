@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+node_modules/
+models/
+*.gguf
+artifacts/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+results/playtests.jsonl
+

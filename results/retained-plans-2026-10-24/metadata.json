@@ -1,0 +1,61 @@
+{
+  "studyVersion": "retained-whole-or-local-plans-v1",
+  "createdAt": "2026-10-24T19:34:41.715Z",
+  "sourceHashes": {
+    "public/engine.js": "0a91f8c2f1e8b9fbc21295c3649c959e29e2d0dd6838c4c9b773e89712456d85",
+    "src/llm.js": "966d1d1c742997bae810523cf5599c3c859ec1e6883ab554db251ec7d74668ae",
+    "src/local-feedback.js": "b4573d99b49f823ffb9193c9d9764baa5c9ba92369a6288e0ba374f578336f0a",
+    "src/repair-study.js": "462afe8da6e9351e358b667884285abed52a30d28e376430c3bc6f7a7367ffc3",
+    "src/motif-generator.js": "89bb6eb37c7fcbf5a8e867d257015cf70f8a079d58e40b07e803e5086175ca7d",
+    "src/sectioned-generator.js": "c91d0fa859298e8c47b46d7612daf8852e1b33cd903dcadf9613827a97dae91e",
+    "src/sectioned-study.js": "3ef4e627668317f1e71e25963302f9dae8549340fa401bf65324e810a2f5159b",
+    "src/section-plan-generator.js": "c3b5a68868c861a33e0858b9aff15f7f45c523aadcd355e45944864489f73556",
+    "src/section-plan-study.js": "137c8819d9c19e17b06132310a1b79a25aa43db2b34fcf8dcb7ef1f0b88933af",
+    "src/section-plan-final.js": "d3ba238336068ec5fd1c0cd38e56ec5110137e5446986d89974b2a35b291fd13",
+    "src/section-final-study.js": "19ea3849e4f91c70e9d35147b1d3345fcac9bde115d825b5530af1a495e7e5e0",
+    "src/feedback-sweep.js": "68e356b5153da842c6917b89ee0e2d9ec70506d161f7fd580deb443c3afc0a56",
+    "src/safe-feedback.js": "47783ec539232d44c620e43609c34754d41693b077786a9354c86ca6fa7a60bd",
+    "src/incremental-repair.js": "92f6005800de75af2a35c8d0b2d3abb9c4f788351a7a5c65104f9d7ce6fa381b",
+    "src/retained-plans.js": "842ad73755bf02899ecf5101ee1f268b69cebd29ec3a70aa421c0ad94653b783",
+    "src/retained-study.js": "8e9a41317097cbb941eb9e5fb618bb429215077c9f41d5df77f8a2a537dad3c5",
+    "scripts/retained-plans-study.js": "09441a978248be633094665c359532f9a8070ca5e0e439e8415d83c6ad984229",
+    "scripts/analyze-retained-plans.js": "12119fbe8eb52bab20ba47520a5e3b9af7019bfa864a7a166f2d539f03013308",
+    "test/retained-plans.test.js": "6f150e3386d29b2c17e97c56dd4a60c01a3ee6eb8f08818f798d412676fb8df2",
+    "examples/briefs-retained.json": "ab0a8c24be4d35bafe30254c1fdf83df75cb04334f7762c299c24eac7d04011e",
+    "docs/RETAINED-PLANS-PROTOCOL.md": "7cf73fe9bcf1a35331fa5319db2dae0071ac1608f805a15971ea55e1bc3a0494"
+  },
+  "physics": {
+    "id": "cube-proxy-v1",
+    "hz": 120,
+    "tile": 240000,
+    "dx": 20772,
+    "jump": 44720,
+    "gravity": 1916,
+    "width": 192000,
+    "height": 216000
+  },
+  "models": [
+    "qwen3.5:4b",
+    "qwen3.5:9b-q4_K_M"
+  ],
+  "caseBankHash": "cdc3c221a3c6fe1d39d1d7d6f0751224ecd2ba4d5ea50a301764eabf4767032f",
+  "witnessHash": "04c8e8dd57dd213e10c957c7d77d3064ddff076c87e26ae32401810162d6d136",
+  "jobHash": "6e34d82ecee22a736f623a5316b4ca4e756b7e5804ae387d1e2547e2efa79072",
+  "cases": 24,
+  "briefs": 12,
+  "families": 6,
+  "replicas": 2,
+  "plannedRows": 288,
+  "concurrency": 2,
+  "maxModelProposals": 624,
+  "settings": {
+    "temperature": 0.65,
+    "numCtx": 8192,
+    "numPredict": 4096,
+    "thinking": false,
+    "timeoutMs": 360000
+  },
+  "primary": "4B local_feedback vs local_none; conditional twelve-brief sign test, six-family sensitivity. All remaining comparisons secondary.",
+  "modelBindingPolicy": "4B digest bound at preparation; 9B may still be downloading. Each model digest is bound in model-bindings.json BEFORE its first inference and never changes. Missing model leaves its assignments pending, never successful or silently excluded.",
+  "design": "Twelve new numeric configurations in six existing families. Shared initial Qwen full plan across six arms/model/case, up to3repairs. Common retained-state guard. Whole/local x none/actionable/random. Random arms use Qwen initial, uniform repair. Fixed protocol before inference, no outcome-driven tuning."
+}

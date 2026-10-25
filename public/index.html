@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10151d">
+  <meta name="description" content="Geometry Dash level generation with a local LLM, trajectory search and native game export.">
+  <title>DashLab · Geometry Dash Level Generator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="brand" aria-label="DashLab home"><span class="brand-icon">◈</span> DASH<span>LAB</span><small>GEN AI / LEVEL DESIGN</small></a>
+    <nav aria-label="Sections"><button class="nav active" data-view="lab">Generator</button><button class="nav" data-view="experiment">Experiment</button><button class="nav" data-view="setup">Setup</button></nav>
+    <button id="model-status" class="status" title="Check the Ollama connection"><i></i><span>Checking Ollama</span></button>
+  </header>
+  <main>
+    <section class="view" id="view-lab">
+      <div class="page-heading"><div><p class="eyebrow">MODERN METHODS OF GENAI · RESEARCH PROTOTYPE</p><h1>Generate. Validate. <em>Repair.</em></h1><p class="subtitle">Turn a brief into a Geometry Dash level, with measured feedback at each step.</p></div><span class="profile-tag">CUBE / 1× / STATIC</span></div>
+      <div class="workspace">
+        <aside class="panel config">
+          <div class="panel-title"><span class="step-number">01</span><h2>Level brief</h2></div>
+          <label for="challenge-preset">Difficulty preset</label>
+          <select id="challenge-preset"><option value="">Custom requirements</option></select>
+          <label for="geometry">Geometry for the next generation</label>
+          <select id="geometry"><option value="ground">Ground obstacles</option><option value="elevated">Platforms, heights and ceilings</option><option value="coins">Routes with coins</option></select>
+          <div data-coins hidden><label for="timing-target">Timing for the all-coins route</label><select id="timing-target"><option value="any">No timing constraint</option><option value="wide">Wide windows · at least 83 ms</option><option value="balanced">Balanced windows · 33–75 ms</option><option value="tight">Tight windows · at most 25 ms</option></select></div>
+          <button id="load-example" class="secondary wide" hidden>Load preset example · no LLM</button>
+          <label for="prompt">Describe the level</label>
+          <textarea id="prompt" rows="5">Create a warm-up level with at least six spikes, three block groups and two double-spike groups. Require at least seven jumps. Leave a safe start and finish.</textarea>
+          <div class="field-row"><div><label for="provider">Generator</label><select id="provider"><option value="ollama">Local model · Ollama</option><option value="demo">Demo · procedural fixture</option></select></div></div>
+          <div class="field-row"><div><label for="seed">Seed</label><input id="seed" type="number" value="42" min="0" max="2147483647"></div><div><label for="r-length">Length in tiles</label><input id="r-length" data-req="length" type="number" value="80" min="24" max="180"></div></div>
+          <details open><summary>Checked requirements <span>including the route</span></summary><div class="requirements-form">
+            <label>Minimum spikes<input type="number" data-req="minSpikes" value="6" min="0" max="100"></label>
+            <label>Block groups<input type="number" data-req="minBlocks" value="3" min="0" max="100"></label>
+            <label>Double-spike groups<input type="number" data-req="minDoubleSpikes" value="2" min="0" max="100"></label>
+            <label>Triple-spike groups<input type="number" data-req="minTripleSpikes" value="0" min="0" max="100"></label>
+            <label>Blocks at least 2 tiles tall<input type="number" data-req="minTallBlocks" value="0" min="0" max="100"></label>
+            <label>Gaps of 1–2 tiles<input type="number" data-req="minTightGaps" value="0" min="0" max="100"></label>
+            <label data-elevated hidden>Raised blocks<input type="number" data-req="minRaisedBlocks" value="0" min="0" max="100"></label>
+            <label data-elevated hidden>Raised spike groups<input type="number" data-req="minRaisedSpikes" value="0" min="0" max="100"></label>
+            <label data-elevated hidden>Ceiling spike groups<input type="number" data-req="minCeilingSpikes" value="0" min="0" max="100"></label>
+            <label data-elevated hidden>Required raised landings<input type="number" data-req="minElevatedLandings" value="0" min="0" max="100"></label>
+            <label data-coins hidden>Minimum coins<input type="number" data-req="minCoins" value="1" min="0" max="3"></label>
+            <label data-coins hidden>Route separation at least 2 tiles high<input type="number" data-req="minBranchSpan" value="0" min="0" max="100" title="Continuous horizontal span of the two solver paths; 0 disables the constraint"></label>
+            <label data-coins hidden>Extra jumps for coins<input type="number" data-req="minCoinDetourJumps" value="1" min="0" max="100"></label>
+            <label data-elevated hidden>Maximum covered spikes<input type="number" data-req="maxCoveredSpikes" value="100" min="0" max="100" title="100 disables the constraint; 0 forbids covered spikes"></label>
+            <label data-elevated hidden>Maximum ground-spike run<input type="number" data-req="maxGroundSpikeRun" value="100" min="0" max="100" title="100 disables the constraint"></label>
+            <label>Required jumps<input type="number" data-req="minJumps" value="7" min="0" max="100"></label>
+            <label>Safe start<input type="number" data-req="safeStart" value="7" min="0" max="100"></label>
+            <label>Safe finish<input type="number" data-req="safeFinish" value="7" min="0" max="100"></label>
+          </div></details>
+          <div class="generate-actions"><button class="primary" id="generate">✦ Generate</button><button id="auto" class="secondary">Run loop · up to 3 repairs →</button><button id="cancel" class="danger" hidden>Stop request</button></div>
+          <p class="fine" id="provider-note">Generate through local Ollama. The initial map is a procedural example.</p>
+        </aside>
+        <div class="centre-column">
+          <section class="panel preview">
+            <div class="preview-heading"><div class="panel-title"><span class="step-number">02</span><h2>Level preview</h2></div><span id="level-name" class="mono">DashLab 42</span></div>
+            <div class="game-wrap"><canvas id="game" aria-label="Level preview; press Space or tap to jump" tabindex="0"></canvas><div class="game-label"><span id="play-mode">EXAMPLE · NO LLM</span><span id="collected-coins" hidden>Coins 0 / 0</span><span id="progress">0%</span></div><div id="game-message" class="game-message"></div></div>
+            <div class="game-toolbar"><div class="play-buttons"><button id="play" title="Manual play">▶ Play</button><button id="replay" title="Replay the path found by search">↗ Replay solution</button><button id="reset" aria-label="Reset to the start">↺</button></div><label class="toggle"><input id="show-path" type="checkbox" checked> Path</label><span class="key-hint"><kbd>SPACE</kbd> jump</span></div>
+            <div id="coin-goal-controls" class="goal-controls" hidden><label for="replay-goal">Replay goal</label><select id="replay-goal"><option value="finish">Reach the finish</option><option value="all-coins">Collect all coins and finish</option></select><span id="coin-path-summary" class="fine"></span><label class="toggle"><input id="compare-paths" type="checkbox" checked> Compare both routes in the overview</label><span class="fine route-key">Green: finish · purple: all coins</span><span id="branch-summary" class="fine"></span></div>
+            <canvas id="overview" aria-label="Full level overview; click to inspect a section" tabindex="0"></canvas>
+            <div class="legend"><span><i class="cube-dot"></i>cube</span><span><i class="spike-dot"></i>spikes</span><span><i class="block-dot"></i>blocks</span><span><i class="raised-dot"></i>platforms</span><span><i class="ceiling-dot"></i>ceiling spikes</span><span><i class="coin-dot"></i>coins</span><span class="mono" id="physics-info">120 Hz · cube-proxy-v1</span></div>
+          </section>
+          <div class="metrics" aria-label="Current level metrics">
+            <div><span>Proxy playability</span><strong id="metric-path">—</strong><small id="metric-search">Trajectory search</small></div>
+            <div><span>Requirements</span><strong id="metric-rules">—</strong><small>Including minimum jumps</small></div>
+            <div><span>Minimum jumps</span><strong id="metric-jumps">—</strong><small>Across successful paths</small></div>
+            <div><span>Repairs</span><strong id="metric-repairs">0</strong><small>In this chain</small></div>
+          </div>
+          <section class="panel timing-panel" aria-label="Timing of the selected path"><div class="timing-heading"><div><p class="eyebrow">INPUT TIMING / PROXY</p><h2>Timing of the selected path</h2></div><button id="timing-analyze" class="secondary">Measure timing</button></div><p id="timing-state" class="fine">Measure how far jump inputs can shift along this route.</p><div class="timing-metrics"><div><span>Minimum window</span><strong id="timing-window">—</strong></div><div><span>Early / late margin</span><strong id="timing-margin">—</strong></div><div><span>Joint input shifts of ±25 ms</span><strong id="timing-jitter">—</strong></div></div><div id="timing-details" class="table-scroll" hidden><table><thead><tr><th>Jump / x</th><th>Early</th><th>Late</th><th>Window</th></tr></thead><tbody id="timing-windows"></tbody></table></div><p class="fine">Windows describe one solver path: one input moves while the others stay fixed. Joint shifts are sampled separately. These are proxy estimates; in-game difficulty needs calibration.</p></section>
+          <section class="panel inspector"><div class="tabbar" role="tablist" aria-label="Level data"><button role="tab" aria-selected="true" class="tab active" data-pane="history">Generation history</button><button role="tab" aria-selected="false" class="tab" data-pane="json">Level JSON</button><button role="tab" aria-selected="false" class="tab" data-pane="validator">Validator</button></div>
+            <div id="pane-history" class="pane"><div id="history"></div></div>
+            <div id="pane-json" class="pane" hidden><label for="json-editor" class="sr-only">Level JSON</label><textarea id="json-editor" spellcheck="false" rows="11"></textarea><div class="inline-actions"><button id="apply-json">Apply JSON</button><button id="download-json">Download JSON</button><label class="file-button">Open JSON<input id="upload-json" type="file" accept=".json,application/json" hidden></label></div></div>
+            <div id="pane-validator" class="pane" hidden><pre id="report-json"></pre></div>
+          </section>
+        </div>
+        <aside class="right-column">
+          <section class="panel feedback"><div class="panel-title"><span class="step-number">03</span><h2>Feedback</h2></div><label for="feedback-mode">What does the generator receive?</label><select id="feedback-mode"><option value="sectioned" selected>Build from library sections</option><option value="incremental">Incremental repair</option><option value="safe">Validator with guard</option><option value="validator">Exact validator errors</option><option value="critic">LLM critique</option><option value="hybrid">Validator and LLM critic</option><option value="none">No external feedback</option></select><div id="edit-feedback-field" hidden><label for="edit-feedback">Repair guidance</label><select id="edit-feedback"><option value="actionable" selected>Detailed report and bounds</option><option value="targeted">Concise targeted feedback</option></select></div><div id="section-feedback-field" hidden><label for="section-feedback">Diagnostics for another proposal</label><select id="section-feedback"><option value="validator">Exact validator errors</option><option value="none" selected>Check only, no diagnostic report</option></select></div><p id="mode-description" class="fine">Error codes, coordinates and rule outcomes from the proxy.</p><button class="secondary wide" id="load-section-demo" hidden>Load recorded Qwen assembly</button><div id="checks" class="checks"></div><div id="critic" class="critic" hidden></div><button id="repair" class="secondary wide">↻ Repair level</button></section>
+          <section class="panel export-panel"><p class="eyebrow">FROM THE LAB TO THE GAME</p><h2>Test in Geometry Dash</h2><p>Download the level and import it into the full game editor.</p><button class="primary wide" id="export-gdlvl">↓ Download .gdlvl</button><button class="text-button" id="export-gmd">.gmd for GDShare</button><p class="fine">.gdlvl uses native GD 2.209+ import. Export structure is checked automatically; verify each new map in the game.</p><button class="secondary wide" id="open-playtest">Record a game playtest</button><p id="playtest-state" class="fine">In-game result: not recorded.</p></section>
+        </aside>
+      </div>
+      <p class="limit-note"><span>ⓘ</span> Search establishes playability only in the fixed approximate physics model. Completion in Geometry Dash is a separate result.</p>
+    </section>
+    <section class="view content-view" id="view-experiment" hidden>
+      <p class="eyebrow">RETAINED PLANS / FIXED STUDY</p><h1>Does verifier feedback help?</h1><p class="subtitle">288 completed chains. Two local Qwen models. Shared initial drafts and explicit controls.</p>
+      <section class="panel experiment-panel"><h2>Local feedback helped Qwen 9B in the proxy</h2><p>The final study compares whole-plan and one-section repairs, each with no diagnostic report, measured feedback or random proposals. Every condition shares the initial Qwen draft and the acceptance guard.</p><div class="table-scroll"><table><thead><tr><th>Repair condition</th><th>Qwen 4B</th><th>Qwen 9B</th></tr></thead><tbody id="latest-study-results"></tbody></table></div><p id="latest-study-note" class="fine">Loading the fixed study results…</p><a class="file-button" href="/repair-demo.html">Explore recorded repairs →</a><p class="fine">The preregistered primary 4B comparison was inconclusive. The 9B result is secondary and exploratory; superiority over random local repair is not established. All rates describe the fixed approximate physics model.</p></section>
+      <details class="panel experiment-panel"><summary>Earlier four-condition experiment and summary importer</summary><p class="fine">Historical interface: this is a separate 120-chain study. Its data are not pooled with the 288-chain study above.</p>
+      <div class="method-grid"><article class="panel"><b>00 / No feedback</b><p>The model revises the map using the original brief.</p></article><article class="panel"><b>01 / LLM critic</b><p>Text critique without access to validator results.</p></article><article class="panel"><b>02 / Validator</b><p>Exact errors, coordinates and rule outcomes.</p></article><article class="panel"><b>03 / Hybrid</b><p>Independent critique and the validator report.</p></article></div>
+      <section class="panel experiment-panel"><h2>Experiment results</h2><p id="results-note">Load summary.json from a completed legacy run. A scripted fixture is not research evidence.</p><label class="file-button">Load summary.json<input id="upload-results" type="file" accept=".json" hidden></label><div class="table-scroll"><table><thead><tr><th>Condition</th><th>N</th><th>Playable¹</th><th>Full success</th><th>Mean repairs</th><th>Diversity²</th></tr></thead><tbody id="results-table"></tbody></table></div><p class="fine">¹ In the proxy. ² Mean Jaccard distance between maps passing every check; fewer than two maps: —.</p></section>
+      <section class="panel experiment-panel"><h2>Run the legacy experiment</h2><pre>npm run experiment:challenge -- --provider ollama --seeds 5 --repairs 3</pre><p>6 briefs across three difficulty groups × 5 seeds × 4 conditions = 120 chains. Each brief/seed shares an initial draft. Requests, responses, checks, costs and native exports are saved.</p><p class="fine">Failures remain in the denominator. Claims about the actual game require separate playtests of exported maps.</p></section>
+      </details>
+    </section>
+    <section class="view content-view" id="view-setup" hidden>
+      <p class="eyebrow">LOCAL FIRST</p><h1>From setup to your first level.</h1><div class="setup-grid">
+        <article class="panel"><span class="step-number">1</span><h2>Install the game</h2><p>Full <a href="https://store.steampowered.com/app/322170/Geometry_Dash/" target="_blank" rel="noreferrer">Geometry Dash on Steam</a>, version 2.209 or later with native import. Geode is not required for this route.</p><p class="fine">Record actual game completion separately from proxy outcomes.</p></article>
+        <article class="panel"><span class="step-number">2</span><h2>Connect a model</h2><p>Ollama runs local models. We use Qwen3.5 from the course model family. Install <a href="https://ollama.com/download/windows" target="_blank" rel="noreferrer">Ollama</a> and download the model:</p><pre>ollama pull qwen3.5:4b</pre><p>If the server is not running:</p><pre>ollama serve</pre><p class="fine">The app defaults to 4B; the final study also used 9B Q4_K_M. Choose a model that fits your memory.</p></article>
+        <article class="panel"><span class="step-number">3</span><h2>Start DashLab</h2><p>Requires Node.js 22+. In the project folder:</p><pre>npm start</pre><p>Open <a href="http://127.0.0.1:4173">127.0.0.1:4173</a>. No additional npm packages are needed. Configure the model through <code>OLLAMA_MODEL</code> in <code>.env</code>.</p></article>
+        <article class="panel"><span class="step-number">4</span><h2>Import and play</h2><p>Download .gdlvl. In the game, open the created-levels editor and use file import. Select the map, inspect its objects and play it.</p><p>Then record the outcome, deaths and problem location in DashLab. The next repair can receive this human feedback.</p><p class="fine">The button location depends on the game version. Check import and completion for each new map.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><span>DASHLAB <span class="muted">/ RESEARCH PROTOTYPE 0.15.0</span></span><a href="/repair-demo.html">Demo: draft → repair → result</a><span>JSON → SEARCH → FEEDBACK → GEOMETRY DASH</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="playtest-dialog"><form id="playtest-form"><div class="dialog-heading"><h2>Native game playtest</h2><button type="button" id="close-playtest" aria-label="Close">×</button></div><p class="fine">The result is linked to this exact map and stored as a human report, separate from automated metrics.</p><label for="game-version">Game version</label><input id="game-version" required placeholder="For example, 2.2091" maxlength="40"><label for="game-result">Outcome</label><select id="game-result"><option value="passed">Completed</option><option value="failed">Not completed</option><option value="import-failed">Import failed</option></select><div class="field-row"><div><label for="game-deaths">Deaths</label><input id="game-deaths" type="number" min="0" max="100000" value="0" required></div><div><label for="game-death-x">Problem location, x</label><input id="game-death-x" type="number" min="0" step="0.1" placeholder="Optional"></div></div><label for="game-notes">What happened?</label><textarea id="game-notes" rows="3" maxlength="2000" placeholder="Collision, narrow jump window, import error…"></textarea><button class="primary wide" type="submit">Save result</button></form></dialog>
+  <script type="module" src="/app.js"></script>
+</body></html>

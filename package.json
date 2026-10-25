@@ -1,0 +1,20 @@
+{
+  "name": "dashlab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Qwen level generation, verifier-guided repair, and a reproducible Geometry Dash study.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test --test-concurrency=1 test/*.test.js",
+    "check": "node scripts/check-repo.mjs",
+    "verify:data": "node scripts/verify-data.mjs",
+    "reproduce": "node scripts/reproduce.mjs",
+    "study": "node --env-file-if-exists=.env scripts/study.mjs",
+    "export": "node scripts/export.mjs"
+  }
+}

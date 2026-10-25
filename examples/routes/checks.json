@@ -1,0 +1,391 @@
+{
+  "source": "procedural route examples, NOT LLM results",
+  "checks": [
+    {
+      "id": "R01",
+      "name": "DL R01 Terraces",
+      "source": "procedural-example",
+      "method": "hand-authored-route-geometry",
+      "requirements": {
+        "length": 64,
+        "minSpikes": 2,
+        "minBlocks": 3,
+        "minDoubleSpikes": 0,
+        "minJumps": 5,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minRaisedSpikes": 1,
+        "minCeilingSpikes": 0,
+        "minElevatedLandings": 0,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v2-elevated",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 64 / 64"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 2 / ≥2"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 6 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 0 / ≥0"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 15 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 6 / ≥5"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 1 / ≥1"
+          },
+          {
+            "code": "RAISED_SPIKES",
+            "passed": true,
+            "message": "Группы шипов над землёй: 1 / ≥1"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 1 / ≤2"
+          }
+        ],
+        "stats": {
+          "spikes": 2,
+          "blocks": 6,
+          "doubleSpikes": 0,
+          "tripleSpikes": 0,
+          "tallBlocks": 1,
+          "tightGaps": 0,
+          "raisedBlocks": 1,
+          "raisedSpikes": 1,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 1
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 29383,
+          "maxX": 64.047,
+          "jumpTicks": [
+            77,
+            123,
+            268,
+            308,
+            348,
+            544
+          ],
+          "objective": "jumps",
+          "pathJumps": 6,
+          "pathElevatedLandings": 1,
+          "minJumps": 6,
+          "errors": []
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": []
+      },
+      "levelHash": "c90cfc379c2a4eee3087f7215c54b2916bc57d2634d61ffbb5683397d88b9f5b",
+      "gameVerified": false,
+      "alternative": null
+    },
+    {
+      "id": "R02",
+      "name": "DL R02 Stay Low",
+      "source": "procedural-example",
+      "method": "hand-authored-route-geometry",
+      "requirements": {
+        "length": 68,
+        "minSpikes": 4,
+        "minBlocks": 3,
+        "minDoubleSpikes": 1,
+        "minJumps": 4,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minRaisedSpikes": 0,
+        "minCeilingSpikes": 2,
+        "minElevatedLandings": 0,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v2-elevated",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 68 / 68"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 6 / ≥4"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 5 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 2 / ≥1"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 12 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 4 / ≥4"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 3 / ≥1"
+          },
+          {
+            "code": "CEILING_SPIKES",
+            "passed": true,
+            "message": "Группы потолочных шипов: 2 / ≥2"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 1 / ≤2"
+          }
+        ],
+        "stats": {
+          "spikes": 6,
+          "blocks": 5,
+          "doubleSpikes": 2,
+          "tripleSpikes": 0,
+          "tallBlocks": 0,
+          "tightGaps": 0,
+          "raisedBlocks": 3,
+          "raisedSpikes": 0,
+          "ceilingSpikes": 2,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 1
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 29386,
+          "maxX": 68.0283,
+          "jumpTicks": [
+            82,
+            268,
+            308,
+            498
+          ],
+          "objective": "jumps",
+          "pathJumps": 4,
+          "pathElevatedLandings": 1,
+          "minJumps": 4,
+          "errors": []
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": []
+      },
+      "levelHash": "78ef9f13466f4312a8cbe8420410e032610e37edaf3657e37d80179c51958929",
+      "gameVerified": false,
+      "alternative": null
+    },
+    {
+      "id": "R03",
+      "name": "DL R03 Two Routes",
+      "source": "procedural-example",
+      "method": "hand-authored-route-geometry",
+      "requirements": {
+        "length": 70,
+        "minSpikes": 4,
+        "minBlocks": 3,
+        "minDoubleSpikes": 1,
+        "minJumps": 5,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minRaisedSpikes": 2,
+        "minCeilingSpikes": 0,
+        "minElevatedLandings": 0,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v2-elevated",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 70 / 70"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 4 / ≥4"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 6 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 1 / ≥1"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 18 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 6 / ≥5"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 3 / ≥1"
+          },
+          {
+            "code": "RAISED_SPIKES",
+            "passed": true,
+            "message": "Группы шипов над землёй: 2 / ≥2"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 2 / ≤2"
+          }
+        ],
+        "stats": {
+          "spikes": 4,
+          "blocks": 6,
+          "doubleSpikes": 1,
+          "tripleSpikes": 0,
+          "tallBlocks": 1,
+          "tightGaps": 0,
+          "raisedBlocks": 3,
+          "raisedSpikes": 2,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 2
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 31373,
+          "maxX": 70.01895,
+          "jumpTicks": [
+            71,
+            111,
+            336,
+            446,
+            493,
+            556
+          ],
+          "objective": "jumps",
+          "pathJumps": 6,
+          "pathElevatedLandings": 1,
+          "minJumps": 6,
+          "errors": []
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": []
+      },
+      "levelHash": "ac677b803b78991cdb7fb4d3a511a334cfd63d61c8756b3784f0a82d606cea19",
+      "gameVerified": false,
+      "alternative": {
+        "upperJumpTicks": [
+          71,
+          111,
+          196,
+          244,
+          336,
+          446,
+          493,
+          556
+        ],
+        "lowerJumpTicks": [
+          71,
+          111,
+          336,
+          446,
+          493,
+          556
+        ],
+        "upperHeightAt22": 4.522766666666667,
+        "lowerHeightAt22": 0,
+        "bothReplayOriginal": true
+      }
+    }
+  ]
+}

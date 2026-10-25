@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "physics": "cube-proxy-v3-coins",
+  "source": "procedural examples, NOT LLM results",
+  "excludedFromMainBenchmark": true,
+  "levels": [
+    {
+      "id": "B01",
+      "name": "DL B01 Long Skyway",
+      "source": "procedural-design-revision",
+      "excludedFromMainBenchmark": true,
+      "levelHash": "7560f23fdacba551ff07df21a800b3f580880861c02052bd2af97ae38a96702b",
+      "requirements": {
+        "length": 84,
+        "minSpikes": 4,
+        "minBlocks": 10,
+        "minDoubleSpikes": 1,
+        "minJumps": 4,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minCoins": 3,
+        "minCoinDetourJumps": 2,
+        "minBranchSpan": 35,
+        "minRaisedBlocks": 6,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "coins": 3,
+      "minJumps": 5,
+      "minAllCoinJumps": 12,
+      "routeSeparation": {
+        "version": "two-witness-height-span-v1",
+        "status": "measured",
+        "minimumHeightTiles": 2,
+        "fromX": 12.89595,
+        "toX": 62.22945,
+        "spanTiles": 49.3335,
+        "seconds": 4.75,
+        "intervals": [
+          {
+            "fromX": 12.89595,
+            "toX": 62.22945,
+            "spanTiles": 49.3335
+          }
+        ],
+        "scope": "Longest continuous tick-sampled interval with the all-coins witness at least 2 tiles above the minimum-jump finish witness. A short span does not prove that no other separated routes exist."
+      },
+      "centeredSeparation": {
+        "version": "two-witness-height-span-v1",
+        "status": "measured",
+        "minimumHeightTiles": 2,
+        "fromX": 12.6363,
+        "toX": 62.22945,
+        "spanTiles": 49.59315,
+        "seconds": 4.7749999999999995,
+        "intervals": [
+          {
+            "fromX": 12.6363,
+            "toX": 62.22945,
+            "spanTiles": 49.59315
+          }
+        ],
+        "scope": "Longest continuous tick-sampled interval with the all-coins witness at least 2 tiles above the minimum-jump finish witness. A short span does not prove that no other separated routes exist."
+      },
+      "jumpTicks": [
+        60,
+        337,
+        510,
+        769,
+        834
+      ],
+      "allCoinJumpTicks": [
+        60,
+        131,
+        200,
+        254,
+        306,
+        355,
+        408,
+        485,
+        540,
+        593,
+        769,
+        834
+      ],
+      "minimumWindowMs": {
+        "finish": 91.66666666666667,
+        "allCoins": 91.66666666666667
+      },
+      "nativeObjects": 54,
+      "gameVerified": false,
+      "humanCompletionStatus": "not-tested"
+    },
+    {
+      "id": "B02",
+      "name": "DL B02 High Low Road",
+      "source": "procedural-design-revision",
+      "excludedFromMainBenchmark": true,
+      "levelHash": "c28c92fc9557b81d134503aeebae1e4bee1df2e8205561bdf162f1e0a0fea4fb",
+      "requirements": {
+        "length": 84,
+        "minSpikes": 4,
+        "minBlocks": 10,
+        "minDoubleSpikes": 1,
+        "minJumps": 4,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minCoins": 3,
+        "minCoinDetourJumps": 2,
+        "minBranchSpan": 35,
+        "minRaisedBlocks": 6,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2
+      },
+      "coins": 3,
+      "minJumps": 5,
+      "minAllCoinJumps": 11,
+      "routeSeparation": {
+        "version": "two-witness-height-span-v1",
+        "status": "measured",
+        "minimumHeightTiles": 2,
+        "fromX": 12.89595,
+        "toX": 62.6622,
+        "spanTiles": 49.76625,
+        "seconds": 4.791666666666666,
+        "intervals": [
+          {
+            "fromX": 12.89595,
+            "toX": 62.6622,
+            "spanTiles": 49.76625
+          }
+        ],
+        "scope": "Longest continuous tick-sampled interval with the all-coins witness at least 2 tiles above the minimum-jump finish witness. A short span does not prove that no other separated routes exist."
+      },
+      "centeredSeparation": {
+        "version": "two-witness-height-span-v1",
+        "status": "measured",
+        "minimumHeightTiles": 2,
+        "fromX": 12.6363,
+        "toX": 62.6622,
+        "spanTiles": 50.0259,
+        "seconds": 4.816666666666666,
+        "intervals": [
+          {
+            "fromX": 12.6363,
+            "toX": 62.6622,
+            "spanTiles": 50.0259
+          }
+        ],
+        "scope": "Longest continuous tick-sampled interval with the all-coins witness at least 2 tiles above the minimum-jump finish witness. A short span does not prove that no other separated routes exist."
+      },
+      "jumpTicks": [
+        60,
+        337,
+        510,
+        769,
+        834
+      ],
+      "allCoinJumpTicks": [
+        60,
+        131,
+        200,
+        254,
+        306,
+        355,
+        408,
+        540,
+        593,
+        769,
+        834
+      ],
+      "minimumWindowMs": {
+        "finish": 75,
+        "allCoins": 91.66666666666667
+      },
+      "nativeObjects": 58,
+      "gameVerified": false,
+      "humanCompletionStatus": "not-tested"
+    }
+  ]
+}

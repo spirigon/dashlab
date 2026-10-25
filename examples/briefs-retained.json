@@ -1,0 +1,218 @@
+[
+  {
+    "id": "new-intro-a",
+    "family": "intro",
+    "difficulty": "baseline",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 96,
+      "minSpikes": 9,
+      "minBlocks": 4,
+      "minDoubleSpikes": 3,
+      "minJumps": 8,
+      "safeStart": 10,
+      "safeFinish": 9,
+      "minTripleSpikes": 2,
+      "minTallBlocks": 2,
+      "minTightGaps": 3
+    }
+  },
+  {
+    "id": "new-intro-b",
+    "family": "intro",
+    "difficulty": "baseline",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 104,
+      "minSpikes": 12,
+      "minBlocks": 4,
+      "minDoubleSpikes": 4,
+      "minJumps": 10,
+      "safeStart": 10,
+      "safeFinish": 10,
+      "minTripleSpikes": 3,
+      "minTallBlocks": 2,
+      "minTightGaps": 3
+    }
+  },
+  {
+    "id": "new-blocks-a",
+    "family": "blocks",
+    "difficulty": "medium",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 108,
+      "minSpikes": 9,
+      "minBlocks": 7,
+      "minDoubleSpikes": 3,
+      "minJumps": 12,
+      "safeStart": 9,
+      "safeFinish": 11,
+      "minTripleSpikes": 2,
+      "minTallBlocks": 3,
+      "minTightGaps": 4
+    }
+  },
+  {
+    "id": "new-blocks-b",
+    "family": "blocks",
+    "difficulty": "medium",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 120,
+      "minSpikes": 9,
+      "minBlocks": 9,
+      "minDoubleSpikes": 3,
+      "minJumps": 14,
+      "safeStart": 10,
+      "safeFinish": 12,
+      "minTripleSpikes": 2,
+      "minTallBlocks": 4,
+      "minTightGaps": 5
+    }
+  },
+  {
+    "id": "new-spikes-a",
+    "family": "spikes",
+    "difficulty": "medium",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 120,
+      "minSpikes": 18,
+      "minBlocks": 5,
+      "minDoubleSpikes": 6,
+      "minJumps": 14,
+      "safeStart": 10,
+      "safeFinish": 12,
+      "minTripleSpikes": 5,
+      "minTallBlocks": 3,
+      "minTightGaps": 5
+    }
+  },
+  {
+    "id": "new-spikes-b",
+    "family": "spikes",
+    "difficulty": "medium",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 132,
+      "minSpikes": 24,
+      "minBlocks": 5,
+      "minDoubleSpikes": 8,
+      "minJumps": 16,
+      "safeStart": 11,
+      "safeFinish": 12,
+      "minTripleSpikes": 6,
+      "minTallBlocks": 3,
+      "minTightGaps": 6
+    }
+  },
+  {
+    "id": "new-stairs-a",
+    "family": "stairs",
+    "difficulty": "medium",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 132,
+      "minSpikes": 15,
+      "minBlocks": 10,
+      "minDoubleSpikes": 5,
+      "minJumps": 16,
+      "safeStart": 10,
+      "safeFinish": 12,
+      "minTripleSpikes": 4,
+      "minTallBlocks": 5,
+      "minTightGaps": 6
+    }
+  },
+  {
+    "id": "new-stairs-b",
+    "family": "stairs",
+    "difficulty": "hard",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 144,
+      "minSpikes": 18,
+      "minBlocks": 12,
+      "minDoubleSpikes": 6,
+      "minJumps": 18,
+      "safeStart": 11,
+      "safeFinish": 13,
+      "minTripleSpikes": 5,
+      "minTallBlocks": 7,
+      "minTightGaps": 7
+    }
+  },
+  {
+    "id": "new-dense-a",
+    "family": "dense",
+    "difficulty": "hard",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 148,
+      "minSpikes": 27,
+      "minBlocks": 9,
+      "minDoubleSpikes": 9,
+      "minJumps": 20,
+      "safeStart": 11,
+      "safeFinish": 13,
+      "minTripleSpikes": 8,
+      "minTallBlocks": 6,
+      "minTightGaps": 8
+    }
+  },
+  {
+    "id": "new-dense-b",
+    "family": "dense",
+    "difficulty": "hard",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 160,
+      "minSpikes": 30,
+      "minBlocks": 10,
+      "minDoubleSpikes": 10,
+      "minJumps": 22,
+      "safeStart": 12,
+      "safeFinish": 14,
+      "minTripleSpikes": 9,
+      "minTallBlocks": 7,
+      "minTightGaps": 9
+    }
+  },
+  {
+    "id": "new-gauntlet-a",
+    "family": "gauntlet",
+    "difficulty": "hard",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 176,
+      "minSpikes": 30,
+      "minBlocks": 12,
+      "minDoubleSpikes": 10,
+      "minJumps": 24,
+      "safeStart": 12,
+      "safeFinish": 14,
+      "minTripleSpikes": 8,
+      "minTallBlocks": 8,
+      "minTightGaps": 10
+    }
+  },
+  {
+    "id": "new-gauntlet-b",
+    "family": "gauntlet",
+    "difficulty": "hard",
+    "prompt": "Создай уровень Geometry Dash с блоками разной высоты, группами шипов и обязательными прыжками. Выполни все численные требования и сохрани проходимость всего уровня.",
+    "requirements": {
+      "length": 180,
+      "minSpikes": 33,
+      "minBlocks": 12,
+      "minDoubleSpikes": 11,
+      "minJumps": 26,
+      "safeStart": 11,
+      "safeFinish": 12,
+      "minTripleSpikes": 10,
+      "minTallBlocks": 8,
+      "minTightGaps": 11
+    }
+  }
+]

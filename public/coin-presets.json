@@ -1,0 +1,68 @@
+[
+  {
+    "id": "upper-reward",
+    "title": "Монеты · награда наверху",
+    "geometry": "coins",
+    "prompt": "Сделай два пути: нижний проще, верхний содержит одну монету. Все монеты должны собираться за один проход. Используй доступный наземный подход к верхним платформам, оставь паузу после соединения путей.",
+    "requirements": {
+      "length": 70,
+      "minSpikes": 2,
+      "minBlocks": 3,
+      "minDoubleSpikes": 0,
+      "minJumps": 3,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minElevatedLandings": 0,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2,
+      "minCoins": 1,
+      "minCoinDetourJumps": 1
+    },
+    "example": "/coin-examples/upper-reward.json"
+  },
+  {
+    "id": "coin-practice",
+    "title": "Монеты · два прыжка за наградой",
+    "geometry": "coins",
+    "prompt": "Короткий маршрут с террасами и двумя монетами: одна над широкой платформой, другая требует отдельного прыжка на открытом безопасном участке. Раздели секции паузами. Все монеты достижимы за один проход.",
+    "requirements": {
+      "length": 64,
+      "minSpikes": 2,
+      "minBlocks": 3,
+      "minDoubleSpikes": 0,
+      "minJumps": 3,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minElevatedLandings": 0,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2,
+      "minCoins": 2,
+      "minCoinDetourJumps": 1
+    },
+    "example": "/coin-examples/coin-practice.json"
+  },
+  {
+    "id": "three-coins",
+    "title": "Монеты · собрать все три",
+    "geometry": "coins",
+    "prompt": "Уровень с тремя монетами: одна на необязательной верхней ветке, одна при прыжке над шипом на площадке, одна в безопасной финальной секции. Простой финиш и сбор всех монет должны быть возможны. Не ставь монеты на взаимоисключающих ветках.",
+    "requirements": {
+      "length": 70,
+      "minSpikes": 2,
+      "minBlocks": 3,
+      "minDoubleSpikes": 0,
+      "minJumps": 3,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minElevatedLandings": 0,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2,
+      "minCoins": 3,
+      "minCoinDetourJumps": 1
+    },
+    "example": "/coin-examples/three-coins.json"
+  }
+]

@@ -1,0 +1,161 @@
+{
+  "schemaValid": true,
+  "passed": true,
+  "playable": true,
+  "physics": "cube-proxy-v3-coins",
+  "rules": [
+    {
+      "code": "LENGTH",
+      "passed": true,
+      "message": "Длина: 84 / 84"
+    },
+    {
+      "code": "SPIKES",
+      "passed": true,
+      "message": "Шипы: 4 / ≥4"
+    },
+    {
+      "code": "BLOCKS",
+      "passed": true,
+      "message": "Группы блоков: 11 / ≥10"
+    },
+    {
+      "code": "DOUBLE_SPIKES",
+      "passed": true,
+      "message": "Группы из ≥2 шипов: 1 / ≥1"
+    },
+    {
+      "code": "SAFE_START",
+      "passed": true,
+      "message": "Безопасный старт: 8 / ≥7"
+    },
+    {
+      "code": "SAFE_FINISH",
+      "passed": true,
+      "message": "Безопасный финиш: 7 / ≥7"
+    },
+    {
+      "code": "MIN_JUMPS",
+      "passed": true,
+      "message": "Обязательные прыжки: 5 / ≥4"
+    },
+    {
+      "code": "RAISED_BLOCKS",
+      "passed": true,
+      "message": "Блоки на высоте: 7 / ≥6"
+    },
+    {
+      "code": "COVERED_SPIKES",
+      "passed": true,
+      "message": "Шипы под блоками: 0 / ≤0"
+    },
+    {
+      "code": "GROUND_SPIKE_RUN",
+      "passed": true,
+      "message": "Самый длинный ряд наземных шипов: 2 / ≤2"
+    },
+    {
+      "code": "COINS",
+      "passed": true,
+      "message": "Монеты: 3 / ≥3"
+    },
+    {
+      "code": "ALL_COINS",
+      "passed": true,
+      "message": "Все монеты за один проход: 3 / 3"
+    },
+    {
+      "code": "COIN_DETOUR",
+      "passed": true,
+      "message": "Дополнительные прыжки за всеми монетами: 6 / ≥2"
+    },
+    {
+      "code": "BRANCH_SPAN",
+      "passed": true,
+      "message": "Непрерывное разделение найденных путей по высоте ≥2 клеток: 49.8 / ≥35 клеток"
+    }
+  ],
+  "stats": {
+    "spikes": 4,
+    "blocks": 11,
+    "doubleSpikes": 1,
+    "tripleSpikes": 0,
+    "tallBlocks": 2,
+    "tightGaps": 0,
+    "raisedBlocks": 7,
+    "raisedSpikes": 2,
+    "ceilingSpikes": 0,
+    "coveredSpikes": 0,
+    "groundSpikeRun": 2,
+    "coins": 3
+  },
+  "solver": {
+    "status": "reachable",
+    "passed": true,
+    "visited": 50295,
+    "maxX": 84.04005,
+    "jumpTicks": [
+      77,
+      342,
+      515,
+      775,
+      851
+    ],
+    "objective": "jumps",
+    "pathJumps": 5,
+    "pathElevatedLandings": 0,
+    "minJumps": 5,
+    "errors": [],
+    "goal": "finish",
+    "collectedCoins": 0,
+    "coinMask": 0
+  },
+  "landingSearch": null,
+  "designWarnings": [],
+  "errors": [],
+  "coinSolver": {
+    "status": "reachable",
+    "passed": true,
+    "visited": 37132,
+    "maxX": 84.04005,
+    "jumpTicks": [
+      77,
+      138,
+      215,
+      273,
+      329,
+      369,
+      415,
+      554,
+      600,
+      775,
+      851
+    ],
+    "objective": "jumps",
+    "pathJumps": 11,
+    "pathElevatedLandings": 9,
+    "minJumps": 11,
+    "errors": [],
+    "goal": "all-coins",
+    "collectedCoins": 3,
+    "coinMask": 7
+  },
+  "coinsPlayable": true,
+  "routeSeparation": {
+    "version": "two-witness-height-span-v1",
+    "status": "measured",
+    "minimumHeightTiles": 2,
+    "fromX": 12.89595,
+    "toX": 62.6622,
+    "spanTiles": 49.76625,
+    "seconds": 4.791666666666666,
+    "intervals": [
+      {
+        "fromX": 12.89595,
+        "toX": 62.6622,
+        "spanTiles": 49.76625
+      }
+    ],
+    "scope": "Longest continuous tick-sampled interval with the all-coins witness at least 2 tiles above the minimum-jump finish witness. A short span does not prove that no other separated routes exist."
+  }
+}

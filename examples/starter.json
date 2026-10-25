@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "name": "DashLab 42",
+  "length": 80,
+  "objects": [
+    {
+      "type": "spike",
+      "x": 7,
+      "w": 2,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 13,
+      "w": 2,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 19,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 26,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 32,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 38,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 44,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 50,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "block",
+      "x": 56,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 63,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "type": "spike",
+      "x": 70,
+      "w": 1,
+      "h": 1
+    }
+  ]
+}

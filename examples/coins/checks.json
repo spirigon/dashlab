@@ -1,0 +1,479 @@
+{
+  "source": "procedural geometry/coin examples, NOT LLM results",
+  "checks": [
+    {
+      "id": "C01",
+      "source": "procedural-example",
+      "levelHash": "3bbdd1601abe83279afd1170b7f6c8a90cc6f9847037bfc7716b962ca728d9ba",
+      "requirements": {
+        "length": 70,
+        "minSpikes": 2,
+        "minBlocks": 3,
+        "minDoubleSpikes": 0,
+        "minJumps": 3,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minElevatedLandings": 0,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2,
+        "minCoins": 1,
+        "minCoinDetourJumps": 1
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v3-coins",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 70 / 70"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 4 / ≥2"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 6 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 1 / ≥0"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 18 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 6 / ≥3"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 3 / ≥1"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 2 / ≤2"
+          },
+          {
+            "code": "COINS",
+            "passed": true,
+            "message": "Монеты: 1 / ≥1"
+          },
+          {
+            "code": "ALL_COINS",
+            "passed": true,
+            "message": "Все монеты за один проход: 1 / 1"
+          },
+          {
+            "code": "COIN_DETOUR",
+            "passed": true,
+            "message": "Дополнительные прыжки за всеми монетами: 2 / ≥1"
+          }
+        ],
+        "stats": {
+          "spikes": 4,
+          "blocks": 6,
+          "doubleSpikes": 1,
+          "tripleSpikes": 0,
+          "tallBlocks": 1,
+          "tightGaps": 0,
+          "raisedBlocks": 3,
+          "raisedSpikes": 2,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 2,
+          "coins": 1
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 31373,
+          "maxX": 70.01895,
+          "jumpTicks": [
+            71,
+            111,
+            336,
+            446,
+            493,
+            556
+          ],
+          "objective": "jumps",
+          "pathJumps": 6,
+          "pathElevatedLandings": 1,
+          "minJumps": 6,
+          "errors": [],
+          "goal": "finish",
+          "collectedCoins": 0,
+          "coinMask": 0
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": [],
+        "coinSolver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 29875,
+          "maxX": 70.01895,
+          "jumpTicks": [
+            71,
+            111,
+            196,
+            244,
+            336,
+            446,
+            493,
+            556
+          ],
+          "objective": "jumps",
+          "pathJumps": 8,
+          "pathElevatedLandings": 2,
+          "minJumps": 8,
+          "errors": [],
+          "goal": "all-coins",
+          "collectedCoins": 1,
+          "coinMask": 1
+        },
+        "coinsPlayable": true
+      },
+      "gameVerified": false
+    },
+    {
+      "id": "C02",
+      "source": "procedural-example",
+      "levelHash": "556c0c3bb6201cfd94120a532a273113d8330286744234506c735f71814d10a6",
+      "requirements": {
+        "length": 64,
+        "minSpikes": 2,
+        "minBlocks": 3,
+        "minDoubleSpikes": 0,
+        "minJumps": 3,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minElevatedLandings": 0,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2,
+        "minCoins": 2,
+        "minCoinDetourJumps": 1
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v3-coins",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 64 / 64"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 2 / ≥2"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 6 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 0 / ≥0"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 15 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 6 / ≥3"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 1 / ≥1"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 1 / ≤2"
+          },
+          {
+            "code": "COINS",
+            "passed": true,
+            "message": "Монеты: 2 / ≥2"
+          },
+          {
+            "code": "ALL_COINS",
+            "passed": true,
+            "message": "Все монеты за один проход: 2 / 2"
+          },
+          {
+            "code": "COIN_DETOUR",
+            "passed": true,
+            "message": "Дополнительные прыжки за всеми монетами: 1 / ≥1"
+          }
+        ],
+        "stats": {
+          "spikes": 2,
+          "blocks": 6,
+          "doubleSpikes": 0,
+          "tripleSpikes": 0,
+          "tallBlocks": 1,
+          "tightGaps": 0,
+          "raisedBlocks": 1,
+          "raisedSpikes": 1,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 1,
+          "coins": 2
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 29383,
+          "maxX": 64.047,
+          "jumpTicks": [
+            77,
+            123,
+            268,
+            308,
+            348,
+            544
+          ],
+          "objective": "jumps",
+          "pathJumps": 6,
+          "pathElevatedLandings": 1,
+          "minJumps": 6,
+          "errors": [],
+          "goal": "finish",
+          "collectedCoins": 1,
+          "coinMask": 1
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": [],
+        "coinSolver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 29298,
+          "maxX": 64.047,
+          "jumpTicks": [
+            77,
+            123,
+            268,
+            308,
+            348,
+            498,
+            544
+          ],
+          "objective": "jumps",
+          "pathJumps": 7,
+          "pathElevatedLandings": 1,
+          "minJumps": 7,
+          "errors": [],
+          "goal": "all-coins",
+          "collectedCoins": 2,
+          "coinMask": 3
+        },
+        "coinsPlayable": true
+      },
+      "gameVerified": false
+    },
+    {
+      "id": "C03",
+      "source": "procedural-example",
+      "levelHash": "73326641f36a6a16ead8c3b88453e009e110830f9712585232dca9bd477696b9",
+      "requirements": {
+        "length": 70,
+        "minSpikes": 2,
+        "minBlocks": 3,
+        "minDoubleSpikes": 0,
+        "minJumps": 3,
+        "safeStart": 7,
+        "safeFinish": 7,
+        "minRaisedBlocks": 1,
+        "minElevatedLandings": 0,
+        "maxCoveredSpikes": 0,
+        "maxGroundSpikeRun": 2,
+        "minCoins": 3,
+        "minCoinDetourJumps": 1
+      },
+      "report": {
+        "schemaValid": true,
+        "passed": true,
+        "playable": true,
+        "physics": "cube-proxy-v3-coins",
+        "rules": [
+          {
+            "code": "LENGTH",
+            "passed": true,
+            "message": "Длина: 70 / 70"
+          },
+          {
+            "code": "SPIKES",
+            "passed": true,
+            "message": "Шипы: 4 / ≥2"
+          },
+          {
+            "code": "BLOCKS",
+            "passed": true,
+            "message": "Группы блоков: 6 / ≥3"
+          },
+          {
+            "code": "DOUBLE_SPIKES",
+            "passed": true,
+            "message": "Группы из ≥2 шипов: 1 / ≥0"
+          },
+          {
+            "code": "SAFE_START",
+            "passed": true,
+            "message": "Безопасный старт: 8 / ≥7"
+          },
+          {
+            "code": "SAFE_FINISH",
+            "passed": true,
+            "message": "Безопасный финиш: 7 / ≥7"
+          },
+          {
+            "code": "MIN_JUMPS",
+            "passed": true,
+            "message": "Обязательные прыжки: 6 / ≥3"
+          },
+          {
+            "code": "RAISED_BLOCKS",
+            "passed": true,
+            "message": "Блоки на высоте: 3 / ≥1"
+          },
+          {
+            "code": "COVERED_SPIKES",
+            "passed": true,
+            "message": "Шипы под блоками: 0 / ≤0"
+          },
+          {
+            "code": "GROUND_SPIKE_RUN",
+            "passed": true,
+            "message": "Самый длинный ряд наземных шипов: 2 / ≤2"
+          },
+          {
+            "code": "COINS",
+            "passed": true,
+            "message": "Монеты: 3 / ≥3"
+          },
+          {
+            "code": "ALL_COINS",
+            "passed": true,
+            "message": "Все монеты за один проход: 3 / 3"
+          },
+          {
+            "code": "COIN_DETOUR",
+            "passed": true,
+            "message": "Дополнительные прыжки за всеми монетами: 3 / ≥1"
+          }
+        ],
+        "stats": {
+          "spikes": 4,
+          "blocks": 6,
+          "doubleSpikes": 1,
+          "tripleSpikes": 0,
+          "tallBlocks": 1,
+          "tightGaps": 0,
+          "raisedBlocks": 3,
+          "raisedSpikes": 2,
+          "ceilingSpikes": 0,
+          "coveredSpikes": 0,
+          "groundSpikeRun": 2,
+          "coins": 3
+        },
+        "solver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 31373,
+          "maxX": 70.01895,
+          "jumpTicks": [
+            71,
+            111,
+            336,
+            446,
+            493,
+            556
+          ],
+          "objective": "jumps",
+          "pathJumps": 6,
+          "pathElevatedLandings": 1,
+          "minJumps": 6,
+          "errors": [],
+          "goal": "finish",
+          "collectedCoins": 1,
+          "coinMask": 2
+        },
+        "landingSearch": null,
+        "designWarnings": [],
+        "errors": [],
+        "coinSolver": {
+          "status": "reachable",
+          "passed": true,
+          "visited": 29806,
+          "maxX": 70.01895,
+          "jumpTicks": [
+            71,
+            111,
+            196,
+            244,
+            336,
+            446,
+            493,
+            556,
+            723
+          ],
+          "objective": "jumps",
+          "pathJumps": 9,
+          "pathElevatedLandings": 2,
+          "minJumps": 9,
+          "errors": [],
+          "goal": "all-coins",
+          "collectedCoins": 3,
+          "coinMask": 7
+        },
+        "coinsPlayable": true
+      },
+      "gameVerified": false
+    }
+  ]
+}

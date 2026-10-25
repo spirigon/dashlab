@@ -1,0 +1,2862 @@
+[
+  {
+    "task": "new-intro-a",
+    "raw": "{\"s1\":{\"pairs\":[\"tower_triple\"],\"extra\":\"none\"},\"s2\":{\"pairs\":[\"tower_triple\"],\"extra\":\"none\"},\"s3\":{\"pairs\":[\"stairs\"],\"extra\":\"none\"},\"s4\":{\"pairs\":[\"triple_pair\"],\"extra\":\"none\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s2": {
+        "pairs": [
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s3": {
+        "pairs": [
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s4": {
+        "pairs": [
+          "triple_pair"
+        ],
+        "extra": "none"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 96,
+      "objects": [
+        {
+          "type": "block",
+          "x": 10,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 13,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 29,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 32,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 48,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 52,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 67,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 72,
+          "w": 3,
+          "h": 1
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 96 / 96"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 12 / ≥9"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 4 / ≥4"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 4 / ≥3"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 10 / ≥10"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 21 / ≥9"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 8 / ≥8"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 4 / ≥2"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 3 / ≥2"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 4 / ≥3"
+        }
+      ],
+      "stats": {
+        "spikes": 12,
+        "blocks": 4,
+        "doubleSpikes": 4,
+        "tripleSpikes": 4,
+        "tallBlocks": 3,
+        "tightGaps": 4
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 38830,
+        "maxX": 96.0705,
+        "minJumps": 8,
+        "jumpTicks": [
+          88,
+          138,
+          307,
+          358,
+          537,
+          577,
+          764,
+          822
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-intro-b",
+    "raw": "{\"s1\":{\"pairs\":[\"tower_triple\"],\"extra\":\"none\"},\"s2\":{\"pairs\":[\"triple_pair\"],\"extra\":\"block\"},\"s3\":{\"pairs\":[\"stairs\"],\"extra\":\"none\"},\"s4\":{\"pairs\":[\"triple_pair\"],\"extra\":\"single_spike\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s2": {
+        "pairs": [
+          "triple_pair"
+        ],
+        "extra": "block"
+      },
+      "s3": {
+        "pairs": [
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s4": {
+        "pairs": [
+          "triple_pair"
+        ],
+        "extra": "single_spike"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 104,
+      "objects": [
+        {
+          "type": "block",
+          "x": 10,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 13,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 31,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 36,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "w": 1,
+          "h": 1,
+          "x": 44
+        },
+        {
+          "type": "block",
+          "x": 52,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 56,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 73,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 78,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 86
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 104 / 104"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 16 / ≥12"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 4 / ≥4"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 5 / ≥4"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 10 / ≥10"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 17 / ≥10"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 10 / ≥10"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 5 / ≥3"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 2 / ≥2"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 4 / ≥3"
+        }
+      ],
+      "stats": {
+        "spikes": 16,
+        "blocks": 4,
+        "doubleSpikes": 5,
+        "tripleSpikes": 5,
+        "tallBlocks": 2,
+        "tightGaps": 4
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 39902,
+        "maxX": 104.0331,
+        "minJumps": 10,
+        "jumpTicks": [
+          88,
+          138,
+          348,
+          406,
+          493,
+          583,
+          623,
+          833,
+          891,
+          983
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-blocks-a",
+    "raw": "{\"s1\":{\"pairs\":[\"triple_pair\"],\"extra\":\"block\"},\"s2\":{\"pairs\":[\"stairs\"],\"extra\":\"single_spike\"},\"s3\":{\"pairs\":[\"stairs\"],\"extra\":\"single_spike\"},\"s4\":{\"pairs\":[\"stairs\"],\"extra\":\"double_spike\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "triple_pair"
+        ],
+        "extra": "block"
+      },
+      "s2": {
+        "pairs": [
+          "stairs"
+        ],
+        "extra": "single_spike"
+      },
+      "s3": {
+        "pairs": [
+          "stairs"
+        ],
+        "extra": "single_spike"
+      },
+      "s4": {
+        "pairs": [
+          "stairs"
+        ],
+        "extra": "double_spike"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 108,
+      "objects": [
+        {
+          "type": "spike",
+          "x": 9,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 14,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "w": 1,
+          "h": 1,
+          "x": 22
+        },
+        {
+          "type": "block",
+          "x": 31,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 35,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 42
+        },
+        {
+          "type": "block",
+          "x": 53,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 57,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 64
+        },
+        {
+          "type": "block",
+          "x": 75,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 79,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 2,
+          "h": 1,
+          "x": 86
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 108 / 108"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 10 / ≥9"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 7 / ≥7"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 3 / ≥3"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 9 / ≥9"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 20 / ≥11"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 12 / ≥12"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 2 / ≥2"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 3 / ≥3"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 4 / ≥4"
+        }
+      ],
+      "stats": {
+        "spikes": 10,
+        "blocks": 7,
+        "doubleSpikes": 3,
+        "tripleSpikes": 2,
+        "tallBlocks": 3,
+        "tightGaps": 4
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 43009,
+        "maxX": 108.0144,
+        "minJumps": 12,
+        "jumpTicks": [
+          94,
+          152,
+          238,
+          341,
+          381,
+          475,
+          595,
+          635,
+          729,
+          849,
+          889,
+          983
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-blocks-b",
+    "raw": "{\"s1\":{\"pairs\":[\"stairs\"],\"extra\":\"double_spike\"},\"s2\":{\"pairs\":[\"stairs\",\"tower_triple\"],\"extra\":\"none\"},\"s3\":{\"pairs\":[\"stairs\"],\"extra\":\"single_spike\"},\"s4\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"none\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "stairs"
+        ],
+        "extra": "double_spike"
+      },
+      "s2": {
+        "pairs": [
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s3": {
+        "pairs": [
+          "stairs"
+        ],
+        "extra": "single_spike"
+      },
+      "s4": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "none"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 120,
+      "objects": [
+        {
+          "type": "block",
+          "x": 10,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 14,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 2,
+          "h": 1,
+          "x": 21
+        },
+        {
+          "type": "block",
+          "x": 34,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 38,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 45,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 48,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 59,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 63,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 70
+        },
+        {
+          "type": "spike",
+          "x": 83,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 88,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 96,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 100,
+          "w": 2,
+          "h": 2
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 120 / 120"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 12 / ≥9"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 9 / ≥9"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 4 / ≥3"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 10 / ≥10"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 18 / ≥12"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 14 / ≥14"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 3 / ≥2"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 5 / ≥4"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 6 / ≥5"
+        }
+      ],
+      "stats": {
+        "spikes": 12,
+        "blocks": 9,
+        "doubleSpikes": 4,
+        "tripleSpikes": 3,
+        "tallBlocks": 5,
+        "tightGaps": 6
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 46420,
+        "maxX": 120.04485,
+        "minJumps": 14,
+        "jumpTicks": [
+          98,
+          138,
+          232,
+          375,
+          415,
+          492,
+          543,
+          664,
+          704,
+          799,
+          949,
+          1007,
+          1092,
+          1132
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-spikes-a",
+    "raw": "{\"s1\":{\"pairs\":[\"triple_pair\"],\"extra\":\"block\"},\"s2\":{\"pairs\":[\"stairs\",\"tower_triple\"],\"extra\":\"none\"},\"s3\":{\"pairs\":[\"tower_triple\"],\"extra\":\"single_spike\"},\"s4\":{\"pairs\":[\"triple_pair\",\"triple_pair\"],\"extra\":\"none\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "triple_pair"
+        ],
+        "extra": "block"
+      },
+      "s2": {
+        "pairs": [
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s3": {
+        "pairs": [
+          "tower_triple"
+        ],
+        "extra": "single_spike"
+      },
+      "s4": {
+        "pairs": [
+          "triple_pair",
+          "triple_pair"
+        ],
+        "extra": "none"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 120,
+      "objects": [
+        {
+          "type": "spike",
+          "x": 10,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 15,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "w": 1,
+          "h": 1,
+          "x": 23
+        },
+        {
+          "type": "block",
+          "x": 34,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 38,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 45,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 48,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 59,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 62,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 70
+        },
+        {
+          "type": "spike",
+          "x": 83,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 88,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 96,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 101,
+          "w": 3,
+          "h": 1
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 120 / 120"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 25 / ≥18"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 5 / ≥5"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 8 / ≥6"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 10 / ≥10"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 16 / ≥12"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 14 / ≥14"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 8 / ≥5"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 3 / ≥3"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 6 / ≥5"
+        }
+      ],
+      "stats": {
+        "spikes": 25,
+        "blocks": 5,
+        "doubleSpikes": 8,
+        "tripleSpikes": 8,
+        "tallBlocks": 3,
+        "tightGaps": 6
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 41184,
+        "maxX": 120.04485,
+        "minJumps": 14,
+        "jumpTicks": [
+          105,
+          163,
+          250,
+          375,
+          415,
+          492,
+          543,
+          654,
+          704,
+          799,
+          949,
+          1007,
+          1099,
+          1157
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-spikes-b",
+    "raw": "{\"s1\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"none\"},\"s2\":{\"pairs\":[\"triple_pair\",\"triple_pair\"],\"extra\":\"none\"},\"s3\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"none\"},\"s4\":{\"pairs\":[\"stairs\",\"triple_pair\"],\"extra\":\"none\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s2": {
+        "pairs": [
+          "triple_pair",
+          "triple_pair"
+        ],
+        "extra": "none"
+      },
+      "s3": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s4": {
+        "pairs": [
+          "stairs",
+          "triple_pair"
+        ],
+        "extra": "none"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 132,
+      "objects": [
+        {
+          "type": "spike",
+          "x": 11,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 16,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 24,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 28,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 38,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 43,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 51,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 56,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 65,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 70,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 78,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 82,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 92,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 96,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 103,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 108,
+          "w": 3,
+          "h": 1
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 132 / 132"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 30 / ≥24"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 6 / ≥5"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 10 / ≥8"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 11 / ≥11"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 21 / ≥12"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 16 / ≥16"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 10 / ≥6"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 3 / ≥3"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 8 / ≥6"
+        }
+      ],
+      "stats": {
+        "spikes": 30,
+        "blocks": 6,
+        "doubleSpikes": 10,
+        "tripleSpikes": 10,
+        "tallBlocks": 3,
+        "tightGaps": 8
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 42424,
+        "maxX": 132.0753,
+        "minJumps": 16,
+        "jumpTicks": [
+          117,
+          175,
+          260,
+          300,
+          429,
+          487,
+          579,
+          637,
+          741,
+          799,
+          884,
+          924,
+          1046,
+          1086,
+          1180,
+          1238
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-stairs-a",
+    "raw": "{\"s1\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"none\"},\"s2\":{\"pairs\":[\"stairs\",\"tower_triple\"],\"extra\":\"none\"},\"s3\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"none\"},\"s4\":{\"pairs\":[\"stairs\",\"stairs\"],\"extra\":\"none\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s2": {
+        "pairs": [
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s3": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s4": {
+        "pairs": [
+          "stairs",
+          "stairs"
+        ],
+        "extra": "none"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 132,
+      "objects": [
+        {
+          "type": "spike",
+          "x": 10,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 15,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 23,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 27,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 37,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 41,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 48,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 51,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 65,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 70,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 78,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 82,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 92,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 96,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 103,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 107,
+          "w": 2,
+          "h": 2
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 132 / 132"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 15 / ≥15"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 11 / ≥10"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 5 / ≥5"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 10 / ≥10"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 23 / ≥12"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 16 / ≥16"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 5 / ≥4"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 6 / ≥5"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 8 / ≥6"
+        }
+      ],
+      "stats": {
+        "spikes": 15,
+        "blocks": 11,
+        "doubleSpikes": 5,
+        "tripleSpikes": 5,
+        "tallBlocks": 6,
+        "tightGaps": 8
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 49402,
+        "maxX": 132.0753,
+        "minJumps": 16,
+        "jumpTicks": [
+          105,
+          163,
+          248,
+          288,
+          410,
+          450,
+          527,
+          577,
+          741,
+          799,
+          884,
+          924,
+          1046,
+          1086,
+          1173,
+          1213
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-stairs-b",
+    "raw": "{\"s1\":{\"pairs\":[\"stairs\",\"tower_triple\"],\"extra\":\"none\"},\"s2\":{\"pairs\":[\"stairs\",\"tower_triple\"],\"extra\":\"triple_spike\"},\"s3\":{\"pairs\":[\"stairs\",\"tower_triple\"],\"extra\":\"none\"},\"s4\":{\"pairs\":[\"stairs\",\"triple_pair\"],\"extra\":\"block\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s2": {
+        "pairs": [
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "triple_spike"
+      },
+      "s3": {
+        "pairs": [
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s4": {
+        "pairs": [
+          "stairs",
+          "triple_pair"
+        ],
+        "extra": "block"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 144,
+      "objects": [
+        {
+          "type": "block",
+          "x": 11,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 15,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 22,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 25,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 41,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 45,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 52,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 55,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "w": 3,
+          "h": 1,
+          "x": 63
+        },
+        {
+          "type": "block",
+          "x": 71,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 75,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 82,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 85,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 101,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 105,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 112,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 117,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "w": 1,
+          "h": 1,
+          "x": 125
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 144 / 144"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 18 / ≥18"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 12 / ≥12"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 6 / ≥6"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 11 / ≥11"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 18 / ≥13"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 18 / ≥18"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 6 / ≥5"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 7 / ≥7"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 8 / ≥7"
+        }
+      ],
+      "stats": {
+        "spikes": 18,
+        "blocks": 12,
+        "doubleSpikes": 6,
+        "tripleSpikes": 6,
+        "tallBlocks": 7,
+        "tightGaps": 8
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 53690,
+        "maxX": 144.0192,
+        "minJumps": 18,
+        "jumpTicks": [
+          110,
+          150,
+          226,
+          277,
+          456,
+          496,
+          573,
+          623,
+          718,
+          803,
+          843,
+          920,
+          970,
+          1150,
+          1190,
+          1284,
+          1342,
+          1429
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "exhaustive-static-count-filtered-feasibility-only-NOT-LLM",
+    "leaves": 138,
+    "checked": 138
+  },
+  {
+    "task": "new-dense-a",
+    "raw": "{\"s1\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"single_spike\"},\"s2\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"tall_block\"},\"s3\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"single_spike\"},\"s4\":{\"pairs\":[\"tower_triple\",\"tower_triple\"],\"extra\":\"double_spike\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "single_spike"
+      },
+      "s2": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "tall_block"
+      },
+      "s3": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "single_spike"
+      },
+      "s4": {
+        "pairs": [
+          "tower_triple",
+          "tower_triple"
+        ],
+        "extra": "double_spike"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 148,
+      "objects": [
+        {
+          "type": "spike",
+          "x": 11,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 16,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 24,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 28,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 35
+        },
+        {
+          "type": "spike",
+          "x": 42,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 47,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 55,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 59,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "w": 1,
+          "h": 2,
+          "x": 66
+        },
+        {
+          "type": "spike",
+          "x": 73,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 78,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 86,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 90,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 97
+        },
+        {
+          "type": "block",
+          "x": 104,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 107,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 115,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 118,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "w": 2,
+          "h": 1,
+          "x": 126
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 148 / 148"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 28 / ≥27"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 9 / ≥9"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 9 / ≥9"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 11 / ≥11"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 20 / ≥13"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 20 / ≥20"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 8 / ≥8"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 6 / ≥6"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 8 / ≥8"
+        }
+      ],
+      "stats": {
+        "spikes": 28,
+        "blocks": 9,
+        "doubleSpikes": 9,
+        "tripleSpikes": 8,
+        "tallBlocks": 6,
+        "tightGaps": 8
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 48629,
+        "maxX": 148.0005,
+        "minJumps": 20,
+        "jumpTicks": [
+          117,
+          175,
+          260,
+          300,
+          394,
+          475,
+          533,
+          618,
+          658,
+          735,
+          833,
+          891,
+          976,
+          1016,
+          1110,
+          1174,
+          1224,
+          1301,
+          1351,
+          1446
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-dense-b",
+    "raw": "{\"s1\":{\"pairs\":[\"tower_triple\",\"tower_triple\"],\"extra\":\"single_spike\"},\"s2\":{\"pairs\":[\"stairs\",\"triple_pair\",\"tower_triple\"],\"extra\":\"none\"},\"s3\":{\"pairs\":[\"triple_pair\",\"stairs\"],\"extra\":\"single_spike\"},\"s4\":{\"pairs\":[\"triple_pair\",\"stairs\",\"tower_triple\"],\"extra\":\"none\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "tower_triple",
+          "tower_triple"
+        ],
+        "extra": "single_spike"
+      },
+      "s2": {
+        "pairs": [
+          "stairs",
+          "triple_pair",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s3": {
+        "pairs": [
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "single_spike"
+      },
+      "s4": {
+        "pairs": [
+          "triple_pair",
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "none"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 160,
+      "objects": [
+        {
+          "type": "block",
+          "x": 12,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 15,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 23,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 26,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 34
+        },
+        {
+          "type": "block",
+          "x": 45,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 49,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 56,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 61,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 69,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 72,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 79,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 84,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 92,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 96,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "w": 1,
+          "h": 1,
+          "x": 103
+        },
+        {
+          "type": "spike",
+          "x": 112,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 117,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 125,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 129,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 136,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 139,
+          "w": 3,
+          "h": 1
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 160 / 160"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 32 / ≥30"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 10 / ≥10"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 10 / ≥10"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 12 / ≥12"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 18 / ≥14"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 22 / ≥22"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 10 / ≥9"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 7 / ≥7"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 10 / ≥9"
+        }
+      ],
+      "stats": {
+        "spikes": 32,
+        "blocks": 10,
+        "doubleSpikes": 10,
+        "tripleSpikes": 10,
+        "tallBlocks": 7,
+        "tightGaps": 10
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 52881,
+        "maxX": 160.03095,
+        "minJumps": 22,
+        "jumpTicks": [
+          111,
+          161,
+          238,
+          288,
+          383,
+          503,
+          543,
+          637,
+          695,
+          769,
+          820,
+          903,
+          960,
+          1046,
+          1086,
+          1180,
+          1284,
+          1342,
+          1427,
+          1467,
+          1544,
+          1594
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-gauntlet-a",
+    "raw": "{\"s1\":{\"pairs\":[\"tower_triple\",\"tower_triple\",\"tower_triple\"],\"extra\":\"none\"},\"s2\":{\"pairs\":[\"triple_pair\",\"stairs\",\"stairs\"],\"extra\":\"none\"},\"s3\":{\"pairs\":[\"triple_pair\",\"triple_pair\",\"stairs\"],\"extra\":\"none\"},\"s4\":{\"pairs\":[\"stairs\",\"triple_pair\",\"stairs\"],\"extra\":\"none\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "tower_triple",
+          "tower_triple",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s2": {
+        "pairs": [
+          "triple_pair",
+          "stairs",
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s3": {
+        "pairs": [
+          "triple_pair",
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s4": {
+        "pairs": [
+          "stairs",
+          "triple_pair",
+          "stairs"
+        ],
+        "extra": "none"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 176,
+      "objects": [
+        {
+          "type": "block",
+          "x": 12,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 15,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 23,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 26,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 34,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 37,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 49,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 54,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 62,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 66,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 73,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 77,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 87,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 92,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 100,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 105,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 113,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 117,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 124,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 128,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 135,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 140,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 148,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 152,
+          "w": 2,
+          "h": 2
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 176 / 176"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 33 / ≥30"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 13 / ≥12"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 11 / ≥10"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 12 / ≥12"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 22 / ≥14"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 24 / ≥24"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 11 / ≥8"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 8 / ≥8"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 12 / ≥10"
+        }
+      ],
+      "stats": {
+        "spikes": 33,
+        "blocks": 13,
+        "doubleSpikes": 11,
+        "tripleSpikes": 11,
+        "tallBlocks": 8,
+        "tightGaps": 12
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 58268,
+        "maxX": 176.0427,
+        "minJumps": 24,
+        "jumpTicks": [
+          111,
+          161,
+          238,
+          288,
+          365,
+          415,
+          556,
+          614,
+          699,
+          739,
+          826,
+          866,
+          995,
+          1053,
+          1145,
+          1203,
+          1288,
+          1328,
+          1415,
+          1455,
+          1550,
+          1607,
+          1693,
+          1733
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  },
+  {
+    "task": "new-gauntlet-b",
+    "raw": "{\"s1\":{\"pairs\":[\"triple_pair\",\"stairs\",\"tower_triple\"],\"extra\":\"none\"},\"s2\":{\"pairs\":[\"stairs\",\"triple_pair\",\"triple_pair\"],\"extra\":\"tall_block\"},\"s3\":{\"pairs\":[\"triple_pair\",\"stairs\",\"stairs\"],\"extra\":\"none\"},\"s4\":{\"pairs\":[\"stairs\",\"triple_pair\",\"triple_pair\"],\"extra\":\"tall_block\"}}",
+    "plan": {
+      "s1": {
+        "pairs": [
+          "triple_pair",
+          "stairs",
+          "tower_triple"
+        ],
+        "extra": "none"
+      },
+      "s2": {
+        "pairs": [
+          "stairs",
+          "triple_pair",
+          "triple_pair"
+        ],
+        "extra": "tall_block"
+      },
+      "s3": {
+        "pairs": [
+          "triple_pair",
+          "stairs",
+          "stairs"
+        ],
+        "extra": "none"
+      },
+      "s4": {
+        "pairs": [
+          "stairs",
+          "triple_pair",
+          "triple_pair"
+        ],
+        "extra": "tall_block"
+      }
+    },
+    "level": {
+      "version": 1,
+      "name": "Global library plan",
+      "length": 180,
+      "objects": [
+        {
+          "type": "spike",
+          "x": 11,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 16,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 24,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 28,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 35,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 38,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 50,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 54,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 61,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 66,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 74,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 79,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "w": 1,
+          "h": 2,
+          "x": 87
+        },
+        {
+          "type": "spike",
+          "x": 89,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 94,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 102,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 106,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 113,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 117,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "block",
+          "x": 128,
+          "w": 2,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "x": 132,
+          "w": 2,
+          "h": 2
+        },
+        {
+          "type": "spike",
+          "x": 139,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 144,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 152,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "spike",
+          "x": 157,
+          "w": 3,
+          "h": 1
+        },
+        {
+          "type": "block",
+          "w": 1,
+          "h": 2,
+          "x": 165
+        }
+      ]
+    },
+    "report": {
+      "schemaValid": true,
+      "passed": true,
+      "playable": true,
+      "rules": [
+        {
+          "code": "LENGTH",
+          "passed": true,
+          "message": "Длина: 180 / 180"
+        },
+        {
+          "code": "SPIKES",
+          "passed": true,
+          "message": "Шипы: 39 / ≥33"
+        },
+        {
+          "code": "BLOCKS",
+          "passed": true,
+          "message": "Группы блоков: 13 / ≥12"
+        },
+        {
+          "code": "DOUBLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥2 шипов: 13 / ≥11"
+        },
+        {
+          "code": "SAFE_START",
+          "passed": true,
+          "message": "Безопасный старт: 11 / ≥11"
+        },
+        {
+          "code": "SAFE_FINISH",
+          "passed": true,
+          "message": "Безопасный финиш: 14 / ≥12"
+        },
+        {
+          "code": "MIN_JUMPS",
+          "passed": true,
+          "message": "Обязательные прыжки: 26 / ≥26"
+        },
+        {
+          "code": "TRIPLE_SPIKES",
+          "passed": true,
+          "message": "Группы из ≥3 шипов: 13 / ≥10"
+        },
+        {
+          "code": "TALL_BLOCKS",
+          "passed": true,
+          "message": "Блоки высотой ≥2 клетки: 8 / ≥8"
+        },
+        {
+          "code": "TIGHT_GAPS",
+          "passed": true,
+          "message": "Промежутки 1–2 клетки: 13 / ≥11"
+        }
+      ],
+      "stats": {
+        "spikes": 39,
+        "blocks": 13,
+        "doubleSpikes": 13,
+        "tripleSpikes": 13,
+        "tallBlocks": 8,
+        "tightGaps": 13
+      },
+      "solver": {
+        "status": "reachable",
+        "passed": true,
+        "visited": 55039,
+        "maxX": 180.024,
+        "minJumps": 26,
+        "jumpTicks": [
+          117,
+          175,
+          260,
+          300,
+          377,
+          427,
+          560,
+          600,
+          695,
+          752,
+          845,
+          903,
+          977,
+          1016,
+          1076,
+          1161,
+          1201,
+          1288,
+          1328,
+          1462,
+          1502,
+          1596,
+          1654,
+          1746,
+          1804,
+          1879
+        ],
+        "errors": []
+      },
+      "physics": "cube-proxy-v1",
+      "errors": []
+    },
+    "outputError": null,
+    "accepted": true,
+    "hiddenFromModel": true,
+    "source": "greedy-feasibility-only-NOT-LLM"
+  }
+]

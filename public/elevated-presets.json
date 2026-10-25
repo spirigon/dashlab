@@ -1,0 +1,68 @@
+[
+  {
+    "id": "terraces",
+    "title": "Маршруты · террасы",
+    "geometry": "elevated",
+    "prompt": "Ступени и спуск, затем короткий подъём на широкую платформу с одним видимым шипом сверху. Между секциями пауза. Используй наземные ступени как подход к платформе, не ставь шипы под блоками и не начинай с прыжка на высокую висящую платформу.",
+    "requirements": {
+      "length": 64,
+      "minSpikes": 2,
+      "minBlocks": 3,
+      "minDoubleSpikes": 0,
+      "minJumps": 5,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minRaisedSpikes": 1,
+      "minCeilingSpikes": 0,
+      "minElevatedLandings": 0,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2
+    },
+    "example": "/elevated-examples/terraces.json"
+  },
+  {
+    "id": "low-ceiling",
+    "title": "Маршруты · остаться внизу",
+    "geometry": "elevated",
+    "prompt": "Чередуй разные действия: одиночный прыжок, пауза до низкого потолка, проход без прыжка, подъём по ступени на широкую платформу. Позже ещё один одиночный шип и потолок с безопасным промежутком между ними. Никаких шипов под блоками и длинных рядов шипов.",
+    "requirements": {
+      "length": 68,
+      "minSpikes": 4,
+      "minBlocks": 3,
+      "minDoubleSpikes": 1,
+      "minJumps": 4,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minRaisedSpikes": 0,
+      "minCeilingSpikes": 2,
+      "minElevatedLandings": 0,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2
+    },
+    "example": "/elevated-examples/low-ceiling.json"
+  },
+  {
+    "id": "two-routes",
+    "title": "Маршруты · верх или низ",
+    "geometry": "elevated",
+    "prompt": "После доступного подъёма предложи два пути: продолжить прыжками по верхней платформе или спуститься и пройти под ней. Затем соедини маршруты на открытом участке с парой шипов и заверши ступенями с одиночным шипом наверху. Не перекрывай шипы блоками сверху. Верхняя ветка может быть необязательной.",
+    "requirements": {
+      "length": 70,
+      "minSpikes": 4,
+      "minBlocks": 3,
+      "minDoubleSpikes": 1,
+      "minJumps": 5,
+      "safeStart": 7,
+      "safeFinish": 7,
+      "minRaisedBlocks": 1,
+      "minRaisedSpikes": 2,
+      "minCeilingSpikes": 0,
+      "minElevatedLandings": 0,
+      "maxCoveredSpikes": 0,
+      "maxGroundSpikeRun": 2
+    },
+    "example": "/elevated-examples/two-routes.json"
+  }
+]

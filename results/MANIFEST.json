@@ -1,0 +1,176 @@
+{
+  "formatVersion": 1,
+  "description": "Original final-study evidence; compare hashes before replay. This manifest is versioned alongside the data.",
+  "files": [
+    {
+      "path": "results/native-playtest.json",
+      "bytes": 1381,
+      "sha256": "3b9607657848696c9d4c9d2fb4e27655c75dff62a45d92763661e9c5709a95d2"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/analysis.json",
+      "bytes": 18699,
+      "sha256": "9efe5623c5869c140424cf15e2101f5a485a00ba42dd3d26051d8543ec9e9d61"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/calls.jsonl",
+      "bytes": 6752689,
+      "sha256": "e8a1ce1978ef4d47285da5755c4aad535f59261ee91e518ff64e8f4e3a05cf59"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/cases.json",
+      "bytes": 17639,
+      "sha256": "2debe1df9721a8ea05869ced9d265ff7da774b93ccc66898eb1106c5d7fd24c2"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/hidden-feasibility.json",
+      "bytes": 60416,
+      "sha256": "6e83e1eb83d98d9481654ffa5e2ba06adc7fa7e0ce05e2e54627dfb0a627e1ca"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/jobs.json",
+      "bytes": 50979,
+      "sha256": "3582337bf278c9b8351c0b3adb0b93e454e502c7f805fd349f8ead5576223190"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/metadata.json",
+      "bytes": 3721,
+      "sha256": "788e80a36914cd6371ba9cef64c737f5b2656914c28130c7788f5a4102ad2eb6"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/metrics.csv",
+      "bytes": 1559,
+      "sha256": "b912075503f458167ce4805b4f32e8b2c08f344c08f59aedba1510864a036f31"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/model-bindings.json",
+      "bytes": 986,
+      "sha256": "ad2dd7fb5d3cc8be7e21237c8f0f1719eef8f996cf72e958674ee8d2148f2e37"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/progress.json",
+      "bytes": 187,
+      "sha256": "3a571abb329c4eaf29a3835fd7a738c29dd5257b85d6eeac49d92b1f0eb87ebc"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/README.md",
+      "bytes": 1390,
+      "sha256": "a7940d5cd7d86844b765956f719173fe874d55095f8ddef7785f05c3cdeef868"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/runs.jsonl",
+      "bytes": 13632047,
+      "sha256": "290b98891bdca56abe243a4fb7bc45a4c307ffc41d0bd5c3d2c1b20d83263214"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/docs/RETAINED-PLANS-PROTOCOL.md",
+      "bytes": 5184,
+      "sha256": "7cf73fe9bcf1a35331fa5319db2dae0071ac1608f805a15971ea55e1bc3a0494"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/examples/briefs-retained.json",
+      "bytes": 8211,
+      "sha256": "ab0a8c24be4d35bafe30254c1fdf83df75cb04334f7762c299c24eac7d04011e"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/public/engine.js",
+      "bytes": 13577,
+      "sha256": "0a91f8c2f1e8b9fbc21295c3649c959e29e2d0dd6838c4c9b773e89712456d85"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/scripts/analyze-retained-plans.js",
+      "bytes": 6743,
+      "sha256": "12119fbe8eb52bab20ba47520a5e3b9af7019bfa864a7a166f2d539f03013308"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/scripts/retained-plans-study.js",
+      "bytes": 10556,
+      "sha256": "09441a978248be633094665c359532f9a8070ca5e0e439e8415d83c6ad984229"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/feedback-sweep.js",
+      "bytes": 15684,
+      "sha256": "68e356b5153da842c6917b89ee0e2d9ec70506d161f7fd580deb443c3afc0a56"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/incremental-repair.js",
+      "bytes": 11539,
+      "sha256": "92f6005800de75af2a35c8d0b2d3abb9c4f788351a7a5c65104f9d7ce6fa381b"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/llm.js",
+      "bytes": 9276,
+      "sha256": "966d1d1c742997bae810523cf5599c3c859ec1e6883ab554db251ec7d74668ae"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/local-feedback.js",
+      "bytes": 6554,
+      "sha256": "b4573d99b49f823ffb9193c9d9764baa5c9ba92369a6288e0ba374f578336f0a"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/motif-generator.js",
+      "bytes": 4795,
+      "sha256": "89bb6eb37c7fcbf5a8e867d257015cf70f8a079d58e40b07e803e5086175ca7d"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/repair-study.js",
+      "bytes": 5638,
+      "sha256": "462afe8da6e9351e358b667884285abed52a30d28e376430c3bc6f7a7367ffc3"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/retained-plans.js",
+      "bytes": 9652,
+      "sha256": "842ad73755bf02899ecf5101ee1f268b69cebd29ec3a70aa421c0ad94653b783"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/retained-study.js",
+      "bytes": 7629,
+      "sha256": "8e9a41317097cbb941eb9e5fb618bb429215077c9f41d5df77f8a2a537dad3c5"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/safe-feedback.js",
+      "bytes": 4370,
+      "sha256": "47783ec539232d44c620e43609c34754d41693b077786a9354c86ca6fa7a60bd"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/section-final-study.js",
+      "bytes": 2108,
+      "sha256": "19ea3849e4f91c70e9d35147b1d3345fcac9bde115d825b5530af1a495e7e5e0"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/section-plan-final.js",
+      "bytes": 5539,
+      "sha256": "d3ba238336068ec5fd1c0cd38e56ec5110137e5446986d89974b2a35b291fd13"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/section-plan-generator.js",
+      "bytes": 10178,
+      "sha256": "c3b5a68868c861a33e0858b9aff15f7f45c523aadcd355e45944864489f73556"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/section-plan-study.js",
+      "bytes": 2939,
+      "sha256": "137c8819d9c19e17b06132310a1b79a25aa43db2b34fcf8dcb7ef1f0b88933af"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/sectioned-generator.js",
+      "bytes": 10928,
+      "sha256": "c91d0fa859298e8c47b46d7612daf8852e1b33cd903dcadf9613827a97dae91e"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/src/sectioned-study.js",
+      "bytes": 7005,
+      "sha256": "3ef4e627668317f1e71e25963302f9dae8549340fa401bf65324e810a2f5159b"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/sources/test/retained-plans.test.js",
+      "bytes": 4903,
+      "sha256": "6f150e3386d29b2c17e97c56dd4a60c01a3ee6eb8f08818f798d412676fb8df2"
+    },
+    {
+      "path": "results/retained-plans-2026-10-24/summary.json",
+      "bytes": 16786,
+      "sha256": "9dfdea38296559024c5b9eef337dd54da7b50c9698a692bfc253bdcbb3f052e6"
+    }
+  ]
+}

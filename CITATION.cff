@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this project, cite the repository and identify the recorded dataset version."
+title: "DashLab: Local Qwen Level Generation and Verifier-Guided Repair"
+type: software
+authors:
+  - family-names: "spirigon"
+version: 1.0.0
+date-released: 2026-10-26
+url: "https://github.com/spirigon/dashlab"
+repository-code: "https://github.com/spirigon/dashlab"
+abstract: "An exportable Geometry Dash prototype and a fully logged 288-chain study of local and whole-plan repairs with no diagnostic text, measured feedback, and random repair controls."

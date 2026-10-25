@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.gdlvl binary
+*.gmd binary
+# Preserve the exact bytes used by the recorded experiment, including line endings.
+results/retained-plans-2026-10-24/** -text
+results/native-playtest.json -text
+public/repair-demo-data.json -text
+examples/recorded-repairs/** -text
+test/fixtures/** -text
+

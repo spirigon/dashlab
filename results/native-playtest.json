@@ -1,0 +1,34 @@
+{
+  "reportedDate": "2026-10-25",
+  "recordedAt": "2026-10-25T07:00:03Z",
+  "timezone": "Europe/Moscow",
+  "source": "human-self-report",
+  "participants": 1,
+  "quote": "я прошел, но модель умеет делать вертикальные блоки и шипы, верно?",
+  "completionReported": true,
+  "context": "Immediately preceding message supplied M01.gdlvl and M03.gdlvl and requested playtesting these two. User reports completion without explicitly enumerating IDs.",
+  "levelIdsInferredFromContext": [
+    "M01",
+    "M03"
+  ],
+  "idsExplicitlyEnumerated": false,
+  "mode": null,
+  "attempts": null,
+  "difficulty": null,
+  "independentVerification": false,
+  "experimentalRole": "Post-outcome demonstration playtest; does not add evaluation cases or change the frozen288-chain proxy study.",
+  "relatedExports": [
+    {
+      "id": "M01",
+      "geometryHash": "098eb4ba4dfc599efbdd51ec58e7ab6c45d98011165e329a805e7cdb7b2ff7dc",
+      "nativeExportSha256": "08643c2ccdc08c4da0f7f62f05852e02a203e9cd9dfcca5f609b1d3610d2faa4",
+      "proxyMinimumJumps": 8
+    },
+    {
+      "id": "M03",
+      "geometryHash": "a47c086d98c25585e20c6f29b5d11b1c58b74e151b0f0f143dedbbd84b3607ca",
+      "nativeExportSha256": "2ef4b3e7c5bd80cb188447f3c34630534b000fdf5e26b832dfb254d44dbfc016",
+      "proxyMinimumJumps": 26
+    }
+  ]
+}
